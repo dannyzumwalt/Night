@@ -1,0 +1,1322 @@
+<window id="0">
+	<defaultcontrol always="true">8999</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+
+	<control type="button" id="333">
+		<description>Defaults Trigger</description>
+		<posx>35</posx>
+		<posy>235</posy>
+		<onfocus>Skin.SetBool(tvoverlays)</onfocus>
+		<onfocus>Skin.SetBool(DefaultsSet)</onfocus>
+		<onfocus>SetFocus(8999)</onfocus>
+		<texturefocus>-</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<visible>!Skin.HasSetting(DefaultsSet)</visible>
+	</control>
+
+	<control type="image" id="87">
+		<texture>-</texture>
+		<visible>Container(300).OnNext | Container(300).OnPrevious</visible>
+		<animation effect="fade" time="150">Hidden</animation>
+	</control>
+
+	<control type="group">
+		<visible>Skin.HasSetting(NoCustomWeatherConditions)</visible>
+		<control type="multiimage">
+			<include>Background_SingleImage</include>
+			<imagepath>backgrounds/winter.png</imagepath>
+			<visible>Container(300).HasFocus(8) + Control.IsVisible(300)</visible>
+			<visible>System.Date(12-21, 12-31)</visible>
+		</control>
+
+		<control type="multiimage">
+			<include>Background_SingleImage</include>
+			<imagepath>backgrounds/winter.png</imagepath>
+			<visible>Container(300).HasFocus(8) + Control.IsVisible(300)</visible>
+			<visible>System.Date(01-01, 03-21)</visible>
+			<visible>!Skin.String(CustomWeatherFolder)</visible>
+		</control>
+		
+		<control type="multiimage">
+			<include>Background_SingleImage</include>
+			<imagepath>backgrounds/spring.png</imagepath>
+			<visible>Container(300).HasFocus(8) + Control.IsVisible(300)</visible>
+			<visible>System.Date(03-21,06-21)</visible>
+			<visible>!Skin.String(CustomWeatherFolder)</visible>
+		</control>
+
+		<control type="multiimage">
+			<include>Background_SingleImage</include>
+			<imagepath>backgrounds/summer.png</imagepath>
+			<visible>Container(300).HasFocus(8) + Control.IsVisible(300)</visible>
+			<visible>System.Date(06-21,09-23)</visible>
+			<visible>!Skin.String(CustomWeatherFolder)</visible>
+		</control>		
+		
+		<control type="multiimage">
+			<include>Background_SingleImage</include>
+			<imagepath>backgrounds/autumn.png</imagepath>
+			<visible>Container(300).HasFocus(8) + Control.IsVisible(300)</visible>
+			<visible>System.Date(09-23,12-21)</visible>
+			<visible>!Skin.String(CustomWeatherFolder)</visible>
+		</control>
+
+		<control type="multiimage">
+			<include>Background_ImageFolder</include>
+			<info>Skin.String(CustomWeatherFolder)</info>
+			<visible>Container(300).HasFocus(8) + Control.IsVisible(300)</visible>
+			<visible>Skin.HasSetting(NoCustomWeatherConditions)</visible>
+			<visible>Skin.String(CustomWeatherFolder)</visible>
+		</control>
+	</control>
+
+		<control type="multiimage">
+			<include>Background_ImageFolder</include>
+			<imagepath>weather/$INFO[Weather.FanartCode]/</imagepath>
+			<visible>Container(300).HasFocus(14) + Control.IsVisible(300)</visible>
+			<visible>!Skin.HasSetting(NoCustomWeatherConditions)</visible>
+			<visible>!Skin.String(CustomWeatherFolder)</visible>
+		</control>
+
+		<control type="largeimage">
+			<animation effect="fade" end="100" time="600" delay="50">Visible</animation>
+			<animation effect="fade" end="0" time="600">Hidden</animation>
+			<texture>backgrounds/settings.jpg</texture>
+			<info>Skin.String(CustomSettings)</info>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<visible>Container(300).HasFocus(9) + Control.IsVisible(300)</visible>
+			<visible>!Skin.String(CustomSettingsFolder)</visible>
+		</control>
+
+		<control type="multiimage">
+			<include>Background_ImageFolder</include>
+			<info>Skin.String(CustomSettingsFolder)</info>
+			<randomize>true</randomize>
+			<visible>Container(300).HasFocus(9) + Control.IsVisible(300)</visible>
+			<visible>Skin.String(CustomSettingsFolder)</visible>
+		</control>
+			
+		<control type="largeimage">
+			<animation effect="fade" end="100" time="600">Visible</animation>
+			<animation effect="fade" end="0" time="600">Hidden</animation>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>backgrounds/pictures.jpg</texture>
+			<info>Skin.String(CustomPictures)</info>
+			<visible>Container(300).HasFocus(6) + Control.IsVisible(300)</visible>
+			<visible>!Skin.String(CustomPicturesFolder)</visible>
+		</control>
+
+		<control type="multiimage">
+			<include>Background_ImageFolder</include>
+			<info>Skin.String(CustomPicturesFolder)</info>
+			<randomize>true</randomize>
+			<visible>Container(300).HasFocus(6) + Control.IsVisible(300)</visible>
+			<visible>Skin.String(CustomPicturesFolder)</visible>
+		</control>
+
+		<control type="largeimage">
+			<animation effect="fade" end="100" time="600">Visible</animation>
+			<animation effect="fade" end="0" time="600">Hidden</animation>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>backgrounds/games.png</texture>
+			<info>Skin.String(CustomGames)</info>
+			<visible>Container(300).HasFocus(7) + Control.IsVisible(300)</visible>
+			<visible>!Skin.String(CustomGamesFolder)</visible>
+		</control>
+
+		<control type="multiimage">
+			<include>Background_ImageFolder</include>
+			<info>Skin.String(CustomGamesFolder)</info>
+			<randomize>true</randomize>
+			<visible>Container(300).HasFocus(7) + Control.IsVisible(300)</visible>
+			<visible>Skin.String(CustomGamesFolder)</visible>
+		</control>
+		
+		<control type="largeimage">
+			<animation effect="fade" end="100" time="600">Visible</animation>
+			<animation effect="fade" end="0" time="600">Hidden</animation>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>backgrounds/videos.jpg</texture>
+			<info>Skin.String(CustomVideo)</info>
+			<visible>Container(300).HasFocus(2) + Control.IsVisible(300) + !Window.Previous(24)</visible>
+			<visible>!Skin.String(CustomVideoFolder)</visible>
+		</control>
+
+		<control type="multiimage">
+			<include>Background_ImageFolder</include>
+			<info>Skin.String(CustomVideoFolder)</info>
+			<randomize>true</randomize>
+			<visible>Container(300).HasFocus(2) + Control.IsVisible(300)</visible>
+			<visible>Skin.String(CustomVideoFolder)</visible>
+		</control>		
+
+		<control type="largeimage">
+			<animation effect="fade" end="100" time="600">Visible</animation>
+			<animation effect="fade" end="0" time="600">Hidden</animation>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>backdrops/default_programs/default.jpg</texture>
+			<info>Skin.String(CustomPrograms)</info>
+			<visible>[Container(300).HasFocus(6) + Control.IsVisible(300)]</visible>
+			<visible>!Skin.String(CustomProgramsFolder)</visible>
+		</control>
+
+		<control type="multiimage">
+			<include>Background_ImageFolder</include>
+			<info>Skin.String(CustomProgramsFolder)</info>
+			<randomize>true</randomize>
+			<visible>[Container(300).HasFocus(6) + Control.IsVisible(300)]</visible>
+			<visible>Skin.String(CustomProgramsFolder)</visible>			
+		</control>
+
+		<control type="largeimage">
+			<animation effect="fade" end="100" time="600">Visible</animation>
+			<animation effect="fade" end="0" time="600">Hidden</animation>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>backgrounds/music.jpg</texture>
+			<info>Skin.String(CustomMusic)</info>
+			<visible>Container(300).HasFocus(1) + Control.IsVisible(300)</visible>
+			<visible>!Skin.String(CustomMusicFolder)</visible>
+		</control>
+
+		<control type="multiimage">
+			<include>Background_ImageFolder</include>
+			<info>Skin.String(CustomMusicFolder)</info>
+			<randomize>true</randomize>
+			<visible>Container(300).HasFocus(1) + Control.IsVisible(300)</visible>
+			<visible>Skin.String(CustomMusicFolder)</visible>
+		</control>
+		
+		<control type="largeimage">
+			<animation effect="fade" end="100" time="600">Visible</animation>
+			<animation effect="fade" end="0" time="600">Hidden</animation>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>backdrops/default_scripts/scripts.jpg</texture>
+			<info>Skin.String(CustomScripts)</info>
+			<visible>Container(300).HasFocus(24) + Control.IsVisible(300)</visible>
+			<visible>!Skin.String(CustomScriptsFolder)</visible>
+		</control>
+
+		<control type="multiimage">
+			<include>Background_ImageFolder</include>
+			<info>Skin.String(CustomScriptsFolder)</info>
+			<randomize>true</randomize>
+			<visible>Container(300).HasFocus(24) + Control.IsVisible(300)</visible>
+			<visible>Skin.String(CustomScriptsFolder)</visible>
+		</control>
+
+		<control type="multiimage">
+			<include>Background_SingleImage</include>
+			<imagepath>backdrops/default_disc</imagepath>
+			<info>Skin.String(CustomPlayDVD)</info>
+			<visible>Container(300).HasFocus(13) + Control.IsVisible(300)</visible>
+			<visible>!Skin.String(CustomPlayDVDFolder)</visible>
+		</control>
+
+		<control type="multiimage">
+			<include>Background_ImageFolder</include>
+			<info>Skin.String(CustomPlayDVDFolder)</info>
+			<randomize>true</randomize>
+			<visible>Container(300).HasFocus(13) + Control.IsVisible(300)</visible>
+			<visible>Skin.String(CustomPlayDVDFolder)</visible>
+		</control>
+
+		<control type="largeimage">
+			<animation effect="fade" end="100" time="600">Visible</animation>
+			<animation effect="fade" end="0" time="600">Hidden</animation>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>backgrounds/favourites.png</texture>
+			<info>Skin.String(CustomAssistant)</info>
+			<visible>Container(300).HasFocus(18) + Control.IsVisible(300)</visible>
+			<visible>!Skin.String(CustomAssistantFolder)</visible>
+		</control>
+
+		<control type="multiimage">
+			<include>Background_ImageFolder</include>
+			<info>Skin.String(CustomAssistantFolder)</info>
+			<randomize>true</randomize>
+			<visible>Container(300).HasFocus(18) + Control.IsVisible(300)</visible>
+			<visible>Skin.String(CustomAssistantFolder)</visible>
+		</control>
+
+		<control type="multiimage">
+			<include>Background_SingleImage</include>
+			<imagepath>backdrops/default_settings</imagepath>
+			<info>Skin.String(CustomSignOut)</info>
+			<visible>Container(300).HasFocus(23) + Control.IsVisible(300)</visible>
+			<visible>!Skin.String(CustomSignOutFolder)</visible>
+		</control>
+
+		<control type="multiimage">
+			<include>Background_ImageFolder</include>
+			<info>Skin.String(CustomSignOutFolder)</info>
+			<randomize>true</randomize>
+			<visible>Container(300).HasFocus(23) + Control.IsVisible(300)</visible>
+			<visible>Skin.String(CustomSignOutFolder)</visible>
+		</control>
+
+		<control type="largeimage">
+			<animation effect="fade" end="100" time="600">Visible</animation>
+			<animation effect="fade" end="0" time="600">Hidden</animation>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>backgrounds/shutdown.jpg</texture>
+			<info>Skin.String(CustomShutdown)</info>
+			<visible>Container(300).HasFocus(13) + Control.IsVisible(300)</visible>
+			<visible>!Skin.String(CustomShutdownFolder)</visible>
+		</control>
+
+		<control type="multiimage">
+			<include>Background_ImageFolder</include>
+			<info>Skin.String(CustomShutdownFolder)</info>
+			<randomize>true</randomize>
+			<visible>Container(300).HasFocus(13) + Control.IsVisible(300)</visible>
+			<visible>Skin.String(CustomShutdownFolder)</visible>
+		</control>			
+		
+
+		<control type="group">
+
+			<control type="largeimage">
+				<visible>Container(300).HasFocus(1000) + !Skin.String(CustomSectionOnefolder)</visible>
+				<animation effect="fade" end="100" time="600">Visible</animation>
+				<animation effect="fade" end="0" time="600">Hidden</animation>
+				<info>Container(300).ListItem.Property(fanart_image)</info>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+			</control>
+
+			<control type="multiimage">
+				<include>Background_ImageFolder</include>
+				<info>Skin.String(CustomSectionOnefolder)</info>
+				<randomize>true</randomize>
+				<visible>Container(300).HasFocus(1000) + Control.IsVisible(300)</visible>
+				<visible>Skin.String(CustomSectionOnefolder)</visible>
+			</control>
+
+			<control type="largeimage">
+				<visible>Container(300).HasFocus(1001) + !Skin.String(CustomSectionTwofolder)</visible>
+				<animation effect="fade" end="100" time="600">Visible</animation>
+				<animation effect="fade" end="0" time="600">Hidden</animation>
+				<info>Container(300).ListItem.Property(fanart_image)</info>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+			</control>
+
+			<control type="multiimage">
+				<include>Background_ImageFolder</include>
+				<info>Skin.String(CustomSectionTwofolder)</info>
+				<randomize>true</randomize>
+				<visible>Container(300).HasFocus(1001) + Control.IsVisible(300)</visible>
+				<visible>Skin.String(CustomSectionTwofolder)</visible>
+			</control>
+
+			<control type="largeimage">
+				<visible>Container(300).HasFocus(1002) + !Skin.String(CustomSectionThreefolder)</visible>
+				<animation effect="fade" end="100" time="600">Visible</animation>
+				<animation effect="fade" end="0" time="600">Hidden</animation>
+				<info>Container(300).ListItem.Property(fanart_image)</info>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+			</control>
+
+			<control type="multiimage">
+				<include>Background_ImageFolder</include>
+				<info>Skin.String(CustomSectionThreefolder)</info>
+				<randomize>true</randomize>
+				<visible>Container(300).HasFocus(1002) + Control.IsVisible(300)</visible>
+				<visible>Skin.String(CustomSectionThreefolder)</visible>
+			</control>
+
+			<control type="largeimage">
+				<visible>Container(300).HasFocus(1003) + !Skin.String(CustomSectionFourfolder)</visible>
+				<animation effect="fade" end="100" time="600">Visible</animation>
+				<animation effect="fade" end="0" time="600">Hidden</animation>
+				<info>Container(300).ListItem.Property(fanart_image)</info>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+			</control>
+
+			<control type="multiimage">
+				<include>Background_ImageFolder</include>
+				<info>Skin.String(CustomSectionFourfolder)</info>
+				<randomize>true</randomize>
+				<visible>Container(300).HasFocus(1003) + Control.IsVisible(300)</visible>
+				<visible>Skin.String(CustomSectionFourfolder)</visible>
+			</control>
+
+			<control type="largeimage">
+				<visible>Container(300).HasFocus(1004) + !Skin.String(CustomSectionFivefolder)</visible>
+				<animation effect="fade" end="100" time="600">Visible</animation>
+				<animation effect="fade" end="0" time="600">Hidden</animation>
+				<info>Container(300).ListItem.Property(fanart_image)</info>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+			</control>
+
+			<control type="multiimage">
+				<include>Background_ImageFolder</include>
+				<info>Skin.String(CustomSectionFivefolder)</info>
+				<randomize>true</randomize>
+				<visible>Container(300).HasFocus(1004) + Control.IsVisible(300)</visible>
+				<visible>Skin.String(CustomSectionFivefolder)</visible>
+			</control>
+
+			<control type="largeimage">
+				<visible>Container(300).HasFocus(1005) + !Skin.String(CustomSectionSixfolder)</visible>
+				<animation effect="fade" end="100" time="600">Visible</animation>
+				<animation effect="fade" end="0" time="600">Hidden</animation>
+				<info>Container(300).ListItem.Property(fanart_image)</info>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+			</control>
+
+			<control type="multiimage">
+				<include>Background_ImageFolder</include>
+				<info>Skin.String(CustomSectionSixfolder)</info>
+				<randomize>true</randomize>
+				<visible>Container(300).HasFocus(1005) + Control.IsVisible(300)</visible>
+				<visible>Skin.String(CustomSectionSixfolder)</visible>
+			</control>
+
+			<control type="largeimage">
+				<visible>Container(300).HasFocus(1006)</visible>
+				<animation effect="fade" end="100" time="600">Visible</animation>
+				<animation effect="fade" end="0" time="600">Hidden</animation>
+				<info>Container(300).ListItem.Property(fanart_image)</info>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+			</control>
+			<control type="largeimage">
+				<visible>Container(300).HasFocus(1007)</visible>
+				<animation effect="fade" end="100" time="600">Visible</animation>
+				<animation effect="fade" end="0" time="600">Hidden</animation>
+				<info>Container(300).ListItem.Property(fanart_image)</info>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+			</control>
+			<control type="largeimage">
+				<visible>Container(300).HasFocus(1008)</visible>
+				<animation effect="fade" end="100" time="600">Visible</animation>
+				<animation effect="fade" end="0" time="600">Hidden</animation>
+				<info>Container(300).ListItem.Property(fanart_image)</info>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+			</control>
+			<control type="largeimage">
+				<visible>Container(300).HasFocus(1009)</visible>
+				<animation effect="fade" end="100" time="600">Visible</animation>
+				<animation effect="fade" end="0" time="600">Hidden</animation>
+				<info>Container(300).ListItem.Property(fanart_image)</info>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+			</control>
+			<control type="largeimage">
+				<visible>Container(300).HasFocus(1010)</visible>
+				<animation effect="fade" end="100" time="600">Visible</animation>
+				<animation effect="fade" end="0" time="600">Hidden</animation>
+				<info>Container(300).ListItem.Property(fanart_image)</info>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+			</control>
+			<control type="largeimage">
+				<visible>Container(300).HasFocus(1011)</visible>
+				<animation effect="fade" end="100" time="600">Visible</animation>
+				<animation effect="fade" end="0" time="600">Hidden</animation>
+				<info>Container(300).ListItem.Property(fanart_image)</info>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+			</control>
+			<control type="largeimage">
+				<visible>Container(300).HasFocus(1012)</visible>
+				<animation effect="fade" end="100" time="600">Visible</animation>
+				<animation effect="fade" end="0" time="600">Hidden</animation>
+				<info>Container(300).ListItem.Property(fanart_image)</info>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+			</control>
+			<control type="largeimage">
+				<visible>Container(300).HasFocus(1013)</visible>
+				<animation effect="fade" end="100" time="600">Visible</animation>
+				<animation effect="fade" end="0" time="600">Hidden</animation>
+				<info>Container(300).ListItem.Property(fanart_image)</info>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+			</control>
+			<control type="largeimage">
+				<visible>Container(300).HasFocus(1014)</visible>
+				<animation effect="fade" end="100" time="600">Visible</animation>
+				<animation effect="fade" end="0" time="600">Hidden</animation>
+				<info>Container(300).ListItem.Property(fanart_image)</info>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+			</control>
+			<control type="largeimage">
+				<visible>Container(300).HasFocus(1015)</visible>
+				<animation effect="fade" end="100" time="600">Visible</animation>
+				<animation effect="fade" end="0" time="600">Hidden</animation>
+				<info>Container(300).ListItem.Property(fanart_image)</info>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+			</control>
+			<control type="largeimage">
+				<visible>Container(300).HasFocus(1016)</visible>
+				<animation effect="fade" end="100" time="600">Visible</animation>
+				<animation effect="fade" end="0" time="600">Hidden</animation>
+				<info>Container(300).ListItem.Property(fanart_image)</info>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+			</control>
+			<control type="largeimage">
+				<visible>Container(300).HasFocus(1017)</visible>
+				<animation effect="fade" end="100" time="600">Visible</animation>
+				<animation effect="fade" end="0" time="600">Hidden</animation>
+				<info>Container(300).ListItem.Property(fanart_image)</info>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+			</control>
+			<control type="largeimage">
+				<visible>Container(300).HasFocus(1018)</visible>
+				<animation effect="fade" end="100" time="600">Visible</animation>
+				<animation effect="fade" end="0" time="600">Hidden</animation>
+				<info>Container(300).ListItem.Property(fanart_image)</info>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+			</control>
+			<control type="largeimage">
+				<visible>Container(300).HasFocus(1019)</visible>
+				<animation effect="fade" end="100" time="600">Visible</animation>
+				<animation effect="fade" end="0" time="600">Hidden</animation>
+				<info>Container(300).ListItem.Property(fanart_image)</info>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+			</control>
+ 
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true" fallback="backgrounds/missing.jpg">$INFO[Container(8000).ListItem.Thumb]</texture>
+			<fadetime>600</fadetime>
+			<include>Animation_CommonFadeNoHide</include>
+			<visible>Control.HasFocus(8000)</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true" fallback="backgrounds/missing.jpg">$INFO[Container(8001).ListItem.Thumb]</texture>
+			<fadetime>600</fadetime>
+			<include>Animation_CommonFadeNoHide</include>
+			<visible>Control.HasFocus(8001)</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true" fallback="backgrounds/missing.jpg">$INFO[Container(8002).ListItem.Thumb]</texture>
+			<fadetime>600</fadetime>
+			<include>Animation_CommonFadeNoHide</include>
+			<visible>Control.HasFocus(8002)</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<include>Dimensions_Fullscreen</include>
+			<texture>mainmenu/vignette.png</texture>
+			<colordiffuse>ff15efd9</colordiffuse>
+			<include>Animation_CommonFadeNoHide</include>
+			<visible>!Skin.HasSetting(horizontal_home)</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<include>Dimensions_Fullscreen</include>
+			<texture>mainmenu/horizontal_back.png</texture>
+			<colordiffuse>ff15efd9</colordiffuse>
+			<include>Animation_CommonFadeNoHide</include>
+			<visible>Skin.HasSetting(horizontal_home)</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<include>Dimensions_Fullscreen</include>
+			<texture>mainmenu/recently_back.png</texture>
+			<colordiffuse>ff15efd9</colordiffuse>
+			<include>Animation_CommonFadeNoHide</include>
+			<animation effect="fade" start="0" end="100" time="400" delay="1800" tween="cubic" easing="inout" condition="Container(300).HasFocus(3) | Container(300).HasFocus(8) | Container(300).HasFocus(14)">Conditional</animation>
+			<visible>Skin.HasSetting(homepageHideRecentlyAdded) + Container(300).HasFocus(3)</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<include>Dimensions_Fullscreen</include>
+			<texture>mainmenu/episode_fade.png</texture>
+			<colordiffuse>ff15efd9</colordiffuse>
+			<include>Animation_CommonFadeNoHide</include>
+			<animation effect="fade" start="0" end="100" time="400" delay="1000" tween="cubic" easing="inout" condition="Container(300).HasFocus(5)">Conditional</animation>
+			<visible>Skin.HasSetting(homepageHideRecentlyAdded) + Container(300).HasFocus(5)</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<include>Dimensions_Fullscreen</include>
+			<texture>mainmenu/recently_back.png</texture>
+			<colordiffuse>ff15efd9</colordiffuse>
+			<include>Animation_CommonFadeNoHide</include>
+			<animation effect="fade" start="0" end="100" time="400" tween="cubic" easing="inout" condition="Container(300).HasFocus(3) | Container(300).HasFocus(8) | Container(300).HasFocus(14)">Conditional</animation>
+			<visible>Skin.HasSetting(HomepageWeatherWidget) + [Container(300).HasFocus(8) | Container(300).HasFocus(14)]</visible>
+		</control>
+		
+		
+		<include condition="Skin.HasSetting(horizontal_home)">HorizontalHome</include>
+
+		<include condition="Skin.HasSetting(homepageHideRecentlyAdded)">HomeRecentlyAddedInfo</include>
+<!--		<include condition="Skin.HasSetting(HomepageWeatherWidget)">HomepageWeatherWidget</include> -->
+		<control type="wraplist" id="300">
+			<posx>-131</posx>
+			<posy>100</posy>
+			<height>470</height>
+			<width>1541</width>
+			<onup>300</onup>
+			<ondown>300</ondown>
+			<onleft></onleft>
+			<onright>9001</onright>
+			<viewtype>list</viewtype>
+			<orientation>vertical</orientation>
+			<focusposition>2</focusposition>
+			<movement>0</movement>
+			<scrolltime>300</scrolltime>
+			<include>Animation_Bartowski_ZoomOutZoomIn</include>
+			<visible>!Skin.HasSetting(horizontal_home)</visible>			
+			<itemlayout width="600" height="61">
+				<control type="label">
+					<width>500</width>
+					<height>61</height>
+					<posx>150</posx>
+					<posy>91</posy>
+					<font>Font_Bartowski_MainMenu</font>
+					<textcolor>38b8b7b7</textcolor>
+					<label>$INFO[ListItem.label]</label>
+					<animation effect="slide" end="-600,0" time="300" condition="ControlGroup(9001).HasFocus">conditional</animation>
+				</control>			
+			</itemlayout>
+			<focusedlayout width="741" height="121">
+				<control type="label">
+					<width>741</width>
+					<height>341</height>
+					<posx>150</posx>
+					<posy>95</posy>
+					<font>Font_Bartowski_MainMenu_Focus</font>
+					<textcolor>ffffffff</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<label>$INFO[ListItem.label]</label>
+					<animation effect="slide" end="0,-300" time="300" condition="ControlGroup(9001).HasFocus">conditional</animation>
+				</control>
+			</focusedlayout>
+			<content>
+				<item id="1">
+					<description>music</description>
+					<label>2</label>
+					<icon>backgrounds/music.jpg</icon>
+					<thumb>$INFO[Skin.String(CustomMusicFolder)]</thumb>
+					<onclick>XBMC.ActivateWindow(MyMusic,return)</onclick>
+					<visible>!Skin.HasSetting(HomeMenuNoMusicButton)</visible>
+				</item>
+				<item id="2">
+					<description>Videos</description>
+					<label>$LOCALIZE[10006]</label>
+					<icon>backgrounds/videos.jpg</icon>
+					<thumb>$INFO[Skin.String(CustomVideosFolder)]</thumb>
+					<onclick>XBMC.ActivateWindow(24)</onclick>
+					<visible>!Skin.HasSetting(HomeMenuNoVideosButton)</visible>
+				</item>
+				<item id="11">
+					<icon>backgrounds/playdisc.jpg</icon>						
+					<label>341</label>
+					<onclick>XBMC.PlayDVD</onclick>
+					<visible>System.HasMediadvd</visible>
+				</item>
+<!--
+				<item id="3">
+					<description>movies</description>
+					<label>$LOCALIZE[20342]</label>
+					<icon>backgrounds/movies.jpg</icon>
+					<thumb>$INFO[Skin.String(CustomMoviesFolder)]</thumb>			
+					<onclick>XBMC.ActivateWindow(24,movietitles,return)</onclick>
+					<visible>!Skin.HasSetting(HomeMenuNoMoviesButton) + Library.HasContent(Movies)</visible>
+				</item>
+				<item id="5">
+					<description>TV shows</description>
+					<label>$LOCALIZE[31004]</label>
+					<icon>backgrounds/tvshows.jpg</icon>
+					<thumb>$INFO[Skin.String(CustomTVShowsFolder)]</thumb>			
+					<onclick>XBMC.ActivateWindow(24,tvshowtitles,return)</onclick>
+					<visible>!Skin.HasSetting(HomeMenuNoTVShowsButton) + Library.HasContent(TVShows)</visible>
+				</item>
+				<item id="21">
+					<description>Custom Movie Five</description>
+					<label>$INFO[Skin.String(Menu_Custom6_Label)]</label>
+					<icon>backgrounds/custom.jpg</icon>
+					<thumb>$INFO[Skin.String(Menu_Custom6_Folder)]</thumb>
+					<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(Menu_Custom6_Path)],return)</onclick>
+					<visible>Skin.HasSetting(Menu_Custom6)</visible>
+				</item>
+				<item id="22">
+					<description>Custom Movie Five</description>
+					<label>$INFO[Skin.String(Menu_Custom7_Label)]</label>
+					<icon>backgrounds/custom.jpg</icon>
+					<thumb>$INFO[Skin.String(Menu_Custom7_Folder)]</thumb>
+					<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(Menu_Custom7_Path)],return)</onclick>
+					<visible>Skin.HasSetting(Menu_Custom7)</visible>
+				</item>
+				<item id="15">
+					<description>Custom Movie One</description>
+					<label>$INFO[Skin.String(Menu_Custom1_Label)]</label>
+					<icon>backgrounds/custom.jpg</icon>
+					<thumb>$INFO[Skin.String(Menu_Custom1_Folder)]</thumb>
+					<onclick>$INFO[Skin.String(Menu_Custom1_Path)]</onclick>
+					<visible>Skin.HasSetting(Menu_Custom1)</visible>
+				</item>
+				<item id="16">
+					<description>Custom Movie Two</description>
+					<label>$INFO[Skin.String(Menu_Custom2_Label)]</label>
+					<icon>backgrounds/custom.jpg</icon>
+					<thumb>$INFO[Skin.String(Menu_Custom2_Folder)]</thumb>
+					<onclick>$INFO[Skin.String(Menu_Custom2_Path)]</onclick>
+					<visible>Skin.HasSetting(Menu_Custom2)</visible>
+				</item>
+				<item id="17">
+					<description>Custom Movie Three</description>
+					<label>$INFO[Skin.String(Menu_Custom3_Label)]</label>
+					<icon>backgrounds/custom.jpg</icon>
+					<thumb>$INFO[Skin.String(Menu_Custom3_Folder)]</thumb>
+					<onclick>$INFO[Skin.String(Menu_Custom3_Path)]</onclick>
+					<visible>Skin.HasSetting(Menu_Custom3)</visible>
+				</item>
+				<item id="19">
+					<description>Custom Movie Four</description>
+					<label>$INFO[Skin.String(Menu_Custom4_Label)]</label>
+					<icon>backgrounds/custom.jpg</icon>
+					<thumb>$INFO[Skin.String(Menu_Custom4_Folder)]</thumb>
+					<onclick>$INFO[Skin.String(Menu_Custom4_Path)]</onclick>
+					<visible>Skin.HasSetting(Menu_Custom4)</visible>
+				</item>
+				<item id="20">
+					<description>Custom Movie Five</description>
+					<label>$INFO[Skin.String(Menu_Custom5_Label)]</label>
+					<icon>backgrounds/custom.jpg</icon>
+					<thumb>$INFO[Skin.String(Menu_Custom5_Folder)]</thumb>
+					<onclick>$INFO[Skin.String(Menu_Custom5_Path)]</onclick>
+					<visible>Skin.HasSetting(Menu_Custom5)</visible>
+				</item>
+-->
+				<item id="6">
+					<description>pictures</description>
+					<label>1</label>
+					<icon>backgrounds/pictures.jpg</icon>
+					<thumb>$INFO[Skin.String(CustomPicturesFolder)]</thumb>			
+					<onclick>XBMC.ActivateWindow(MyPictures)</onclick>
+					<visible>!Skin.HasSetting(HomeMenuNoPicturesButton)</visible>
+				</item>
+				<item id="7">
+					<description>programs</description>
+					<label>Plex Online</label>
+					<icon>backgrounds/games.png</icon>
+					<thumb>$INFO[Skin.String(CustomGamesFolder)]</thumb>				
+		            <onclick>Plex.ActivateWindow(1,plex://localhost/system/appstore,return)</onclick>
+					<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
+				</item>
+<!--
+				<item id="10">
+					<description>Scripts</description>
+					<label>$LOCALIZE[247]</label>
+					<icon>backgrounds/scripts.jpg</icon>
+					<thumb>$INFO[Skin.String(CustomScriptsFolder)]</thumb>	
+					<onclick>XBMC.ActivateWindow(scripts)</onclick>
+					<visible>!Skin.HasSetting(HomeMenuNoScriptsButton)</visible>
+				</item>
+-->
+				<item id="18">
+					<description>favourites</description>
+					<label>$LOCALIZE[1036]</label>
+					<icon>backgrounds/favourites.png</icon>
+					<thumb>$INFO[Skin.String(CustomfavouritesFolder)]</thumb>	
+					<onclick>XBMC.ActivateWindow(favourites)</onclick>
+					<visible>!Skin.HasSetting(HomeMenuNofavouritesButton)</visible>
+				</item>
+				<item id="14">
+					<description>weather</description>
+					<label>8</label>
+					<icon>backgrounds/weather.jpg</icon>
+					<thumb>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</thumb>				
+					<onclick>xbmc.activatewindow(2600)</onclick>
+					<visible>!Skin.HasSetting(HomeMenuNoWeatherButton) + !Skin.HasSetting(conditions_weather_backdrop)</visible>
+				</item>
+				<item id="8">
+					<description>weather</description>
+					<label>8</label>
+					<icon>backgrounds/weather.jpg</icon>
+					<thumb>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]$INFO[Weather.FanartCode]</thumb>				
+					<onclick>xbmc.activatewindow(2600)</onclick>
+					<visible>!Skin.HasSetting(HomeMenuNoWeatherButton) + Skin.HasSetting(conditions_weather_backdrop)</visible>
+				</item>
+				<item id="9">
+					<description>settings</description>
+					<label>5</label>
+					<icon>backgrounds/settings.jpg</icon>
+					<thumb>$INFO[Skin.String(CustomSettingsFolder)]</thumb>			
+					<onclick>XBMC.ActivateWindow(4)</onclick>
+					<visible>!Skin.HasSetting(HomeMenuNoSettingsButton)</visible>
+				</item>
+				<!--<item id="12">
+					<include>BackgroundVarsSignOut</include>					
+					<label>31209</label>
+					<onclick>System.LogOff</onclick>
+					<visible>Skin.HasSetting(signout)</visible>
+				</item>-->	
+				<item id="13">
+					<label>13005</label>
+					<icon>backgrounds/shutdown.jpg</icon>
+					<thumb>$INFO[Skin.String(Home_Custom_Back_Shutdown_Folder)]</thumb>
+					<onclick>XBMC.Shutdown()</onclick>
+					<visible>!Skin.HasSetting(HomeMenuNoShutdownButton)</visible>
+				</item>
+			</content>
+		</control>
+		
+		
+		
+		<control type="button" id="8999">
+			<description>Run Recently added</description>
+			<posx>-20</posx>
+			<posy>-20</posy>
+			<width>1</width>
+			<height>1</height>
+			<label>-</label>
+			<font>-</font>
+			<onfocus>XBMC.RunScript(special://skin/scripts/RecentlyAdded.py,limit=10&amp;albums=True&amp;unplayed=True)</onfocus>
+			<onfocus>SetFocus(300)</onfocus>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+<!--		<visible>Skin.HasSetting(homepageHideRecentlyAdded)</visible>  -->
+			<visible>false</visible>
+		</control>
+		<control type="button" id="8999">
+			<description>Don't run Recently added</description>
+			<posx>-20</posx>
+			<posy>-20</posy>
+			<width>1</width>
+			<height>1</height>
+			<label>-</label>
+			<font>-</font>
+			<onfocus>SetFocus(300)</onfocus>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+			<visible>!Skin.HasSetting(homepageHideRecentlyAdded)</visible>
+		</control>
+			
+			
+			
+			
+		<control type="group" id="9001">
+				<posx>20</posx>
+				<posy>120</posy>
+				<animation effect="fade" start="100" end="0" time="0" condition="!ControlGroup(9001).HasFocus">conditional</animation>
+				<animation effect="fade" start="0" end="100" delay="300" time="200" condition="ControlGroup(9001).HasFocus">conditional</animation>
+				<animation effect="fade" start="100" end="0" time="0" condition="ControlGroup(9001).HasFocus">WindowClose</animation>
+				<visible>!Skin.HasSetting(horizontal_home)</visible>
+<!--VIDEOS -->	<control type="grouplist" id="9010">
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>600</width>
+					<height>465</height>
+					<onleft>300</onleft>
+					<onright>Control.SetFocus(8000,0)</onright>
+					<onup>9010</onup>
+					<ondown>9010</ondown>
+					<itemgap>0</itemgap>
+					<visible>Container(300).HasFocus(2)</visible>
+					<control type="button" id="90101">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$LOCALIZE[20342]</label>
+						<onclick>ActivateWindow(VideoLibrary,MovieTitles,return)</onclick>
+						<visible>Library.HasContent(Movies)</visible>
+					</control>
+					<control type="button" id="90102">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$LOCALIZE[20343]</label>
+						<onclick>ActivateWindow(VideoLibrary,TvShowTitles,return)</onclick>
+						<visible>Library.HasContent(TVShows)</visible>
+					</control>
+					<!--<control type="button" id="90103">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>Music Videos</label>
+						<onclick>ActivateWindow(VideoLibrary,MusicVideoTitles,return)</onclick>
+						<visible>Library.HasContent(MusicVideos)</visible>
+					</control>-->
+					<control type="button" id="90104">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$LOCALIZE[744]</label>
+						<onclick>ActivateWindow(VideoFiles)</onclick>
+					</control>
+					<control type="button" id="90105">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$LOCALIZE[14022]</label>
+						<onclick>ActivateWindow(VideoLibrary)</onclick>
+						<visible>Library.HasContent(Videos)</visible>
+					</control>
+					<control type="button" id="90106">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$LOCALIZE[1037]</label>
+						<onclick>ActivateWindow(VideoLibrary,Plugins)</onclick>
+						<visible>Library.HasContent(Video)</visible>
+					</control>
+					<!--<control type="button" id="90107">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>31007</label>
+						<onclick>ActivateWindow(VideoFiles,$LOCALIZE[1037])</onclick>
+						<visible>!Library.HasContent(Video)</visible>
+					</control>-->
+				</control>
+<!--MOVIES -->	<control type="grouplist" id="9011">
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>600</width>
+					<height>500</height>
+					<onleft>300</onleft>
+					<onright>Control.SetFocus(8000,0)</onright>
+					<onup>9011</onup>
+					<ondown>9011</ondown>
+					<itemgap>0</itemgap>
+					<visible>Container(300).HasFocus(3)</visible>
+					<control type="button" id="90111">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$LOCALIZE[744]</label>
+						<onclick>ActivateWindow(VideoFiles)</onclick>
+					</control>
+					<!--<control type="button" id="90112">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$LOCALIZE[31079]</label>
+						<onclick>ActivateWindow(VideoLibrary,MovieTitles,return)</onclick>
+					</control>-->
+					<control type="button" id="90113">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$LOCALIZE[135]</label>
+						<onclick>ActivateWindow(VideoLibrary,MovieGenres,return)</onclick>
+					</control>
+					<control type="button" id="90114">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$LOCALIZE[652]</label>
+						<onclick>ActivateWindow(VideoLibrary,MovieYears,return)</onclick>
+					</control>
+					<control type="button" id="90115">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$LOCALIZE[344]</label>
+						<onclick>ActivateWindow(VideoLibrary,MovieActors,return)</onclick>
+					</control>
+					<control type="button" id="90116">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$LOCALIZE[20348]</label>
+						<onclick>ActivateWindow(VideoLibrary,MovieDirectors,return)</onclick>
+					</control>
+					<control type="button" id="90117">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$LOCALIZE[31081]</label>
+						<onclick>ActivateWindow(VideoLibrary,RecentlyAddedMovies,return)</onclick>
+					</control>
+					<control type="button" id="90118">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>20389</label>
+						<onclick>ActivateWindow(VideoLibrary,MusicVideoTitles,return)</onclick>
+						<visible>Library.HasContent(MusicVideos)</visible>
+					</control>
+				</control>
+<!--TV SHOWS --><control type="grouplist" id="9012">
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>600</width>
+					<height>465</height>
+					<onleft>300</onleft>
+					<onright>Control.SetFocus(8001,0)</onright>
+					<onup>9012</onup>
+					<ondown>9012</ondown>
+					<itemgap>0</itemgap>
+					<visible>Container(300).HasFocus(5)</visible>
+					<control type="button" id="90126">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$LOCALIZE[744]</label>
+						<onclick>ActivateWindow(VideoFiles)</onclick>
+					</control>
+					<control type="button" id="90121">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$LOCALIZE[31079]</label>
+						<onclick>ActivateWindow(VideoLibrary,TVShowTitles,return)</onclick>
+					</control>
+					<control type="button" id="90122">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$LOCALIZE[135]</label>
+						<onclick>ActivateWindow(VideoLibrary,TVShowGenres,return)</onclick>
+					</control>
+					<control type="button" id="90123">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$LOCALIZE[652]</label>
+						<onclick>ActivateWindow(VideoLibrary,TVShowYears,return)</onclick>
+					</control>
+					<control type="button" id="90124">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$LOCALIZE[344]</label>
+						<onclick>ActivateWindow(VideoLibrary,TVShowActors,return)</onclick>
+					</control>
+					<control type="button" id="90125">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$LOCALIZE[31081]</label>
+						<onclick>ActivateWindow(VideoLibrary,RecentlyAddedEpisodes,return)</onclick>
+					</control>
+				</control>
+<!--SETTINGS --><control type="grouplist" id="9014">
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>600</width>
+					<height>465</height>
+					<onleft>300</onleft>
+					<onright>9001</onright>
+					<onup>9014</onup>
+					<ondown>9014</ondown>
+					<itemgap>0</itemgap>
+					<visible>Container(300).HasFocus(9)</visible>
+					<control type="button" id="90141">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>5</label>
+						<onclick>ActivateWindow(Settings)</onclick>
+					</control>
+					<control type="button" id="90142">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>7</label>
+						<onclick>ActivateWindow(FileManager)</onclick>
+					</control>
+					<control type="button" id="90143">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>13200</label>
+						<onclick>ActivateWindow(Profiles)</onclick>
+					</control>
+					<control type="button" id="90144">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$LOCALIZE[20126]</label>
+						<onclick>System.LogOff</onclick>
+						<visible>System.HasLoginScreen</visible>
+					</control>
+					<control type="button" id="90145">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>130</label>
+						<onclick>ActivateWindow(SystemInfo)</onclick>
+					</control>
+				</control>
+<!--SCRIPTS -->	<control type="grouplist" id="9015">
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>600</width>
+					<height>465</height>
+					<onleft>300</onleft>
+					<onright>9001</onright>
+					<onup>9015</onup>
+					<ondown>9015</ondown>
+					<itemgap>0</itemgap>
+					<visible>Container(300).HasFocus(10) + [[Skin.HasSetting(HomeScriptButton1) + !IsEmpty(Skin.String(HomeScriptButton1_label))] | [Skin.HasSetting(HomeScriptButton2) + !IsEmpty(Skin.String(HomeScriptButton2_label))] | [Skin.HasSetting(HomeScriptButton3) + !IsEmpty(Skin.String(HomeScriptButton3_label))] | [Skin.HasSetting(HomeScriptButton4) + !IsEmpty(Skin.String(HomeScriptButton4_label))] | [Skin.HasSetting(HomeScriptButton5) + !IsEmpty(Skin.String(HomeScriptButton5_label))] | [Skin.HasSetting(HomeScriptButton6) + !IsEmpty(Skin.String(HomeScriptButton6_label))]]</visible>
+					<control type="button" id="90151">
+						<description>Button1</description>
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(HomeScriptButton1_label)]</label>
+						<onclick>Setfocus(300)</onclick>
+						<onclick>XBMC.RunScript($INFO[Skin.String(HomeScriptButton1_Path)])</onclick>
+						<visible>Skin.HasSetting(HomeScriptButton1) + !IsEmpty(Skin.String(HomeScriptButton1_label))</visible>
+					</control>
+					<control type="button" id="90152">
+						<description>Button2</description>
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(HomeScriptButton2_label)]</label>
+						<onclick>Setfocus(300)</onclick>
+						<onclick>XBMC.RunScript($INFO[Skin.String(HomeScriptButton2_Path)])</onclick>
+						<visible>Skin.HasSetting(HomeScriptButton2) + !IsEmpty(Skin.String(HomeScriptButton2_label))</visible>
+					</control>
+					<control type="button" id="90153">
+						<description>Button3</description>
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(HomeScriptButton3_label)]</label>
+						<onclick>Setfocus(300)</onclick>
+						<onclick>XBMC.RunScript($INFO[Skin.String(HomeScriptButton3_Path)])</onclick>
+						<visible>Skin.HasSetting(HomeScriptButton3) + !IsEmpty(Skin.String(HomeScriptButton3_label))</visible>
+					</control>
+					<control type="button" id="90154">
+						<description>Button4</description>
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(HomeScriptButton4_label)]</label>
+						<onclick>Setfocus(300)</onclick>
+						<onclick>XBMC.RunScript($INFO[Skin.String(HomeScriptButton4_Path)])</onclick>
+						<visible>Skin.HasSetting(HomeScriptButton4) + !IsEmpty(Skin.String(HomeScriptButton4_label))</visible>
+					</control>
+					<control type="button" id="90155">
+						<description>Button5</description>
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(HomeScriptButton5_label)]</label>
+						<onclick>Setfocus(300)</onclick>
+						<onclick>XBMC.RunScript($INFO[Skin.String(HomeScriptButton5_Path)])</onclick>
+						<visible>Skin.HasSetting(HomeScriptButton5) + !IsEmpty(Skin.String(HomeScriptButton5_label))</visible>
+					</control>
+					<control type="button" id="90156">
+						<description>Button6</description>
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(HomeScriptButton6_label)]</label>
+						<onclick>Setfocus(300)</onclick>
+						<onclick>XBMC.RunScript($INFO[Skin.String(HomeScriptButton6_Path)])</onclick>
+						<visible>Skin.HasSetting(HomeScriptButton6) + !IsEmpty(Skin.String(HomeScriptButton6_label))</visible>
+					</control>
+				</control>
+				
+<!--MUSIC -->	<control type="grouplist" id="9017">
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>600</width>
+					<height>465</height>
+					<onleft>300</onleft>
+					<onright>Control.SetFocus(8002,0)</onright>
+					<onup>9017</onup>
+					<ondown>9017</ondown>
+					<itemgap>0</itemgap>
+					<visible>Container(300).HasFocus(1)</visible>
+					<control type="button" id="90171">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$LOCALIZE[133]</label>
+						<onclick>ActivateWindow(MusicLibrary,Artists,return)</onclick>
+						<visible>Library.HasContent(Music)</visible>
+					</control>
+					<control type="button" id="90172">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$LOCALIZE[132]</label>
+						<onclick>ActivateWindow(MusicLibrary,Albums,return)</onclick>
+						<visible>Library.HasContent(Music)</visible>
+					</control>
+					<control type="button" id="90173">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$LOCALIZE[134]</label>
+						<onclick>ActivateWindow(MusicLibrary,Songs,return)</onclick>
+						<visible>Library.HasContent(Music)</visible>
+					</control>
+					<control type="button" id="90174">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$LOCALIZE[744]</label>
+						<onclick>ActivateWindow(MusicFiles)</onclick>
+					</control>
+					<control type="button" id="90175">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$LOCALIZE[14022]</label>
+						<onclick>ActivateWindow(MusicLibrary)</onclick>
+						<visible>Library.HasContent(Music)</visible>
+					</control>
+					<control type="button" id="90176">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$LOCALIZE[31007]</label>
+						<onclick>ActivateWindow(MusicLibrary,Plugins)</onclick>
+						<visible>Library.HasContent(Music)</visible>
+					</control>
+					<!--<control type="button" id="90177">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>31007</label>
+						<onclick>ActivateWindow(MusicFiles,$LOCALIZE[1038])</onclick>
+						<visible>!Library.HasContent(Music)</visible>
+					</control>-->
+				</control>
+<!--WEATHER -->	<control type="grouplist" id="9018">
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>600</width>
+					<height>465</height>
+					<onleft>300</onleft>
+					<onright>Control.SetFocus(8001,0)</onright>
+					<onup>9018</onup>
+					<ondown>9018</ondown>
+					<itemgap>0</itemgap>
+					<visible>Container(300).HasFocus(8) | Container(300).HasFocus(14)</visible>
+					<control type="button" id="90181">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>143</label>
+						<onclick>Skin.SetString(Weather,1)</onclick>
+					</control>	
+					<control type="button" id="90182">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$LOCALIZE[31254]</label>
+						<onclick>Skin.SetString(Weather,2)</onclick>
+					</control>
+					<control type="button" id="90183">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$LOCALIZE[31255]</label>
+						<onclick>Skin.SetString(Weather,3)</onclick>
+					</control>
+				</control>
+<!--Shutdown --><control type="grouplist" id="9019">
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>600</width>
+					<height>465</height>
+					<onleft>300</onleft>
+					<onright>Control.SetFocus(8001,0)</onright>
+					<onup>9019</onup>
+					<ondown>9019</ondown>
+					<itemgap>0</itemgap>
+					<visible>Container(300).HasFocus(13)</visible>
+					<control type="button" id="90184">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$LOCALIZE[31242]</label>
+						<onclick>AlarmClock(shutdowntimer,Shutdown)</onclick>>
+					</control>
+					<control type="button" id="90185">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$LOCALIZE[31243]</label>
+						<onclick>CancelAlarm(ShutdownTimer)</onclick>
+						<visible>System.HasAlarm(ShutdownTimer)</visible>
+					</control>
+					<control type="button" id="90186">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>13011</label>
+						<onclick>Dialog.Close(ShutdownMenu,yes)</onclick>
+						<onclick>Suspend()</onclick>
+					</control>
+					<control type="button" id="90187">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>13010</label>
+						<onclick>Hibernate()</onclick>
+					</control>
+					<control type="button" id="90188">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>13313</label>
+						<onclick>RestartApp()</onclick>
+					</control>
+					<control type="button" id="90189">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>13012</label>
+						<onclick>XBMC.Quit()</onclick>
+					</control>
+					<!--<control type="button" id="90190">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>Shutdown</label>
+						<onclick>ShutDown()</onclick>
+					</control>-->
+				</control>
+				<control type="grouplist" id="9020">
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>600</width>
+					<height>465</height>
+					<onleft>300</onleft>
+					<onright>Control.SetFocus(8001,0)</onright>
+					<onup>9019</onup>
+					<ondown>9019</ondown>
+					<itemgap>0</itemgap>
+					<visible>Container(300).HasFocus(11)</visible>
+					<control type="button" id="91185">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$LOCALIZE[13391]</label>
+						<onclick>EjectTray()</onclick>
+						<visible>System.HasMediaDVD</visible>
+					</control>
+				</control>
+			</control>	
+		
+		<control type="group">
+			<animation effect="zoom" start="0" end="50" time="0" delay="0" condition="Player.HasVideo">Conditional</animation>
+			<animation effect="fade" start="0" end="100" time="400" delay="800" condition="Player.HasVideo">Conditional</animation>
+			<posx>0</posx>
+			<posy>1140</posy>
+			<control type="image"> 
+				<description>trailer image</description>
+				<posx>-70</posx>
+				<posy>-70</posy>   
+				<width>693</width>     
+				<height>445</height> 
+				<texture>dialogs/trailer_diffuse_back.png</texture>
+			</control>
+			<control type="videowindow" id="8">
+				<posx>30</posx>
+				<posy>26</posy>
+				<width>500</width>
+				<height>256</height>
+			</control>
+		</control>
+		<include>Music_Global_Showcase</include>
+		<include>Global_RSS</include>
+		<include>Global_Time</include>
+
+		
+
+	</controls>
+</window>

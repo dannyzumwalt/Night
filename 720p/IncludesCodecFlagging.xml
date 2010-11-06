@@ -1,0 +1,118 @@
+<includes>
+	<include name="VideoCodecFlaggingConditions">
+		<control type="image">
+			<description>Video resolution Image</description>
+			<width>60</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>$INFO[ListItem.Property(mediaTag-videoResolution),flagging/video/,.png]</texture>
+			<visible>!IsEmpty(Listitem.Property(mediaTag::videoResolution))</visible>
+		</control>
+		<control type="image">
+			<description>Video Codec Image</description>
+			<width>70</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>$INFO[ListItem.Property(mediaTag-videoCodec),flagging/video/,.png]</texture>
+			<visible>!IsEmpty(Listitem.Property(mediaTag::videoCodec))</visible>
+		</control>
+	</include>
+	<include name="VideoCodecFlaggingConditions_grey">
+		<control type="image">
+			<description>Video resolution Image</description>
+			<width>60</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>$INFO[ListItem.Property(mediaTag-videoResolution),flagging_grey/video/,.png]</texture>
+			<visible>!IsEmpty(Listitem.Property(mediaTag::videoResolution))</visible>
+		</control>
+		<control type="image">
+			<description>Video Codec Image</description>
+			<width>70</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>$INFO[ListItem.Property(mediaTag-videoCodec),flagging_grey/video/,.png]</texture>
+			<visible>!IsEmpty(Listitem.Property(mediaTag::videoCodec))</visible>
+		</control>
+	</include>
+	<include name="VideoTypeHackFlaggingConditions">
+	</include>
+	<include name="VideoMPAAFlaggingConditions_grey">
+		<control type="image">
+			<description>Rated </description>
+			<posx>10</posx>
+			<width>80</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>$INFO[ListItem.Property(mediaTag-contentRating),flagging/ratings/mpaa_,.png]</texture>
+			<colordiffuse>Text-Filemode</colordiffuse>
+			<visible>true</visible>
+		</control>
+	</include>
+	<include name="VideoMPAAFlaggingConditions">
+		<control type="image">
+			<description>Rated</description>
+			<posx>10</posx>
+			<width>80</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>$INFO[ListItem.Property(mediaTag-contentRating),flagging/ratings/mpaa_,.png]</texture>
+			<visible>true</visible>
+		</control>
+	</include>
+	<include name="AudioCodecFlaggingConditions">
+		<control type="image">
+			<description>Codec Image</description>
+			<width>60</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>$INFO[ListItem.Property(mediaTag-audioCodec),flagging/audio/,.png]</texture>
+			<visible>!IsEmpty(Listitem.Property(mediaTag::audioCodec))</visible>
+		</control>
+
+		<control type="image">
+			<description>Channels Image</description>
+			<width>60</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>$INFO[ListItem.Property(mediaTag-audioChannels),flagging/audio/,.png]</texture>
+			<visible>!IsEmpty(Listitem.Property(mediaTag::audioChannels))</visible>
+		</control>
+	</include>
+	<include name="AudioCodecFlaggingConditions_grey">
+		<control type="image">
+			<description>Codec Image</description>
+			<width>60</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>$INFO[ListItem.Property(mediaTag-audioCodec),flagging_grey/audio/,.png]</texture>
+			<visible>!IsEmpty(Listitem.Property(mediaTag::audioCodec))</visible>
+		</control>
+
+		<control type="image">
+			<description>Channels Image</description>
+			<width>60</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>$INFO[ListItem.Property(mediaTag-audioChannels),flagging_grey/audio/,.png]</texture>
+			<visible>!IsEmpty(Listitem.Property(mediaTag::audioChannels))</visible>
+		</control>
+	</include>
+	<include name="AspectCodecFlaggingConditions">
+		<control type="image">
+			<description>Aspectratio Image</description>
+			<width>60</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>$INFO[ListItem.Property(mediaTag-aspectRatio),flagging/aspectratio/,.png]</texture>
+		</control>
+	</include>
+	<include name="AspectCodecFlaggingConditions_grey">
+		<control type="image">
+			<description>Aspectratio Image</description>
+			<width>60</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>$INFO[ListItem.Property(mediaTag-aspectRatio),flagging_grey/aspectratio/,.png]</texture>
+		</control>
+	</include></includes>
