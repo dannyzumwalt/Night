@@ -1225,7 +1225,7 @@
 					<control type="button" id="90184">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$LOCALIZE[31242]</label>
-						<onclick>AlarmClock(shutdowntimer,Shutdown)</onclick>>
+						<onclick>AlarmClock(,Shutdown,)</onclick>
 					</control>
 					<control type="button" id="90185">
 						<include>ButtonHomeSubCommonValues</include>
@@ -1237,17 +1237,19 @@
 						<include>ButtonHomeSubCommonValues</include>
 						<label>13011</label>
 						<onclick>Dialog.Close(ShutdownMenu,yes)</onclick>
-						<onclick>Suspend()</onclick>
+						<onclick>XBMC.SleepSystem()</onclick>
 					</control>
+<!--
 					<control type="button" id="90187">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>13010</label>
 						<onclick>Hibernate()</onclick>
 					</control>
+-->
 					<control type="button" id="90188">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>13313</label>
-						<onclick>RestartApp()</onclick>
+						<onclick>XBMC.ReloadSkin()</onclick>
 					</control>
 					<control type="button" id="90189">
 						<include>ButtonHomeSubCommonValues</include>
