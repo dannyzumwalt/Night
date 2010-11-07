@@ -327,9 +327,9 @@
 	<control type="grouplist">
 		<visible>Control.IsVisible(50) + Container.Content(movies) + !Skin.HasSetting(no_media_flags) + !Skin.HasSetting(Files_Fanart)</visible>
 		<description>Media Codec Flagging Images</description>
-		<posx>864</posx>
+		<posx>856</posx>
 		<posy>680</posy>
-		<width>380</width>
+		<width>390</width>
 		<align>center</align>
 		<itemgap>0</itemgap>
 		<orientation>horizontal</orientation>
