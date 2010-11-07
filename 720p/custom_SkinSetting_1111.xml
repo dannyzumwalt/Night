@@ -476,15 +476,15 @@
 						<selected>Skin.HasSetting(HomepageWeatherWidget)</selected>
 					</control>
 					<!--End Weather Widget-->
-<!--
+
 					<control type="radiobutton" id="206">
 						<description>conditions based weather backdrop style</description>
 						<include>skin_settings_labels</include>
 						<label>$LOCALIZE[31221]</label>
-						<onclick>Skin.ToggleSetting(conditions_weather_backdrop)</onclick>
-						<selected>Skin.HasSetting(conditions_weather_backdrop)</selected>
+						<onclick>Skin.ToggleSetting(NoCustomWeatherConditions)</onclick>
+						<selected>!Skin.HasSetting(NoCustomWeatherConditions)</selected>
 					</control>
--->
+
 					<control type="button" id="207">
 						<width>860</width>
 						<height>26</height>

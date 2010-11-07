@@ -3,18 +3,6 @@
 	<allowoverlay>yes</allowoverlay>
 	<controls>
 
-	<control type="button" id="333">
-		<description>Defaults Trigger</description>
-		<posx>35</posx>
-		<posy>235</posy>
-		<onfocus>Skin.SetBool(tvoverlays)</onfocus>
-		<onfocus>Skin.SetBool(DefaultsSet)</onfocus>
-		<onfocus>SetFocus(8999)</onfocus>
-		<texturefocus>-</texturefocus>
-		<texturenofocus>-</texturenofocus>
-		<visible>!Skin.HasSetting(DefaultsSet)</visible>
-	</control>
-
 	<control type="image" id="87">
 		<texture>-</texture>
 		<visible>Container(300).OnNext | Container(300).OnPrevious</visible>
@@ -24,40 +12,40 @@
 	<control type="group">
 		<visible>Skin.HasSetting(NoCustomWeatherConditions)</visible>
 		<control type="multiimage">
-			<include>Background_SingleImage</include>
+			<include>Background_ImageFolder</include>
 			<imagepath>backgrounds/winter.png</imagepath>
-			<visible>Container(300).HasFocus(8) + Control.IsVisible(300)</visible>
+			<visible>Container(300).HasFocus(14) + Control.IsVisible(300)</visible>
 			<visible>System.Date(12-21, 12-31)</visible>
 		</control>
 
 		<control type="multiimage">
-			<include>Background_SingleImage</include>
+			<include>Background_ImageFolder</include>
 			<imagepath>backgrounds/winter.png</imagepath>
-			<visible>Container(300).HasFocus(8) + Control.IsVisible(300)</visible>
+			<visible>Container(300).HasFocus(14) + Control.IsVisible(300)</visible>
 			<visible>System.Date(01-01, 03-21)</visible>
 			<visible>!Skin.String(CustomWeatherFolder)</visible>
 		</control>
 		
 		<control type="multiimage">
-			<include>Background_SingleImage</include>
+			<include>Background_ImageFolder</include>
 			<imagepath>backgrounds/spring.png</imagepath>
-			<visible>Container(300).HasFocus(8) + Control.IsVisible(300)</visible>
+			<visible>Container(300).HasFocus(14) + Control.IsVisible(300)</visible>
 			<visible>System.Date(03-21,06-21)</visible>
 			<visible>!Skin.String(CustomWeatherFolder)</visible>
 		</control>
 
 		<control type="multiimage">
-			<include>Background_SingleImage</include>
+			<include>Background_ImageFolder</include>
 			<imagepath>backgrounds/summer.png</imagepath>
-			<visible>Container(300).HasFocus(8) + Control.IsVisible(300)</visible>
+			<visible>Container(300).HasFocus(14) + Control.IsVisible(300)</visible>
 			<visible>System.Date(06-21,09-23)</visible>
 			<visible>!Skin.String(CustomWeatherFolder)</visible>
 		</control>		
 		
 		<control type="multiimage">
-			<include>Background_SingleImage</include>
+			<include>Background_ImageFolder</include>
 			<imagepath>backgrounds/autumn.png</imagepath>
-			<visible>Container(300).HasFocus(8) + Control.IsVisible(300)</visible>
+			<visible>Container(300).HasFocus(14) + Control.IsVisible(300)</visible>
 			<visible>System.Date(09-23,12-21)</visible>
 			<visible>!Skin.String(CustomWeatherFolder)</visible>
 		</control>
@@ -65,7 +53,7 @@
 		<control type="multiimage">
 			<include>Background_ImageFolder</include>
 			<info>Skin.String(CustomWeatherFolder)</info>
-			<visible>Container(300).HasFocus(8) + Control.IsVisible(300)</visible>
+			<visible>Container(300).HasFocus(14) + Control.IsVisible(300)</visible>
 			<visible>Skin.HasSetting(NoCustomWeatherConditions)</visible>
 			<visible>Skin.String(CustomWeatherFolder)</visible>
 		</control>
