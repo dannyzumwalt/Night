@@ -10,15 +10,16 @@
 				<posy>490</posy>
 				<width>225</width>
 				<height>300</height>
-				<visible>![Skin.String(Weather,2) | Skin.String(Weather,3)] + [Container(300).HasFocus(8) | Container(300).HasFocus(14)]</visible>
+				<visible>[Container(300).HasFocus(8) | Container(300).HasFocus(14)]</visible>
 				<include>VisibleFadeEffect</include>
 				<animation effect="slide" start="225,0" end="0,0" time="600" delay="400" tween="cubic" easing="inout" condition="Container(300).HasFocus(8) | Container(300).HasFocus(14)">Conditional</animation>
 
 			<!-- today -->
 				<!-- condition icon -->
-				<control type="image" id="21">
+				<control type="image">
 					<width>100</width>
 					<height>100</height>
+					<texture>$INFO[Weather.Conditions]</texture>				
 					<posx>64</posx>
 					<posy>0</posy>
 				</control>
@@ -35,7 +36,7 @@
 					<textcolor>mainblue</textcolor>
 				</control>
 				<control type="label" id="23">
-					<label>[B]$INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits][/B]</label>
+					<label>[B]$INFO[Weather.Temperature][/B]</label>
 					<width>95</width>
 					<height>20</height>
 					<posx>60</posx>
@@ -44,8 +45,19 @@
 					<align>center</align>
 					<textcolor>white</textcolor>
 				</control>
+				<control type="label" id="23">
+					<label>[B]$INFO[Weather.Conditions][/B]</label>
+					<width>175</width>
+					<height>20</height>
+					<posx>25</posx>
+					<posy>150</posy>
+					<font>Font_Bartowski_Movies</font>
+					<align>center</align>
+					<textcolor>white</textcolor>
+				</control>
 				<!-- Feels Like -->
 				<!-- Uv Index -->
+<!--
 				<control type="label" id="25">
 					<label>[COLOR mainblue]$LOCALIZE[403]: [/COLOR] [COLOR white]$INFO[Window(Weather).Property(Current.UVIndex)][/COLOR]</label>
 					<width>205</width>
@@ -55,7 +67,9 @@
 					<font>Font_Bartowski_Movies</font>
 					<align>center</align>
 				</control>
+-->
 				<!-- Dew Point -->
+<!--
 				<control type="label" id="27">
 					<label>[COLOR mainblue]$LOCALIZE[405]: [/COLOR] [COLOR white]$INFO[Window(Weather).Property(Current.DewPoint)][/COLOR]</label>
 					<width>205</width>
@@ -65,7 +79,9 @@
 					<font>Font_Bartowski_Movies</font>
 					<align>center</align>
 				</control>
+-->
 				<!-- Humidity -->
+<!--
 				<control type="label" id="28">
 					<label>[COLOR mainblue]$LOCALIZE[406]: [/COLOR] [COLOR white]$INFO[Window(Weather).Property(Current.Humidity)][/COLOR]</label>
 					<width>205</width>
@@ -76,6 +92,7 @@
 					<align>center</align>
 					<textcolor>SettingsDetail</textcolor>
 				</control>
+-->
 			</control>
 		</control>
 	<!--3 Days - Mini-->

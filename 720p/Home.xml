@@ -630,7 +630,7 @@
 		<include condition="Skin.HasSetting(horizontal_home)">HorizontalHome</include>
 
 		<include condition="Skin.HasSetting(homepageHideRecentlyAdded)">HomeRecentlyAddedInfo</include>
-<!--		<include condition="Skin.HasSetting(HomepageWeatherWidget)">HomepageWeatherWidget</include> -->
+		<include condition="Skin.HasSetting(HomepageWeatherWidget)">HomepageWeatherWidget</include> 
 		<control type="wraplist" id="300">
 			<posx>-131</posx>
 			<posy>100</posy>
