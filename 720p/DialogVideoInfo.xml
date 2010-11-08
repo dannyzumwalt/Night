@@ -76,7 +76,7 @@
 					</control>
 					<control type="grouplist">
 						<description>Media Codec Flagging Images</description>
-						<posx>130</posx>
+						<posx>110</posx>
 						<posy>600</posy>
 						<width>490</width>
 						<align>center</align>
@@ -84,6 +84,7 @@
 						<orientation>horizontal</orientation>
 						<include>VisibleFadeEffect</include>
 						<visible>!Control.IsVisible(50)</visible>
+						<animation effect="slide" start="0,0" end="-25,0" time="0" tween="cubic" easing="inout" condition="true">Conditional</animation> 
 						<include condition="!Skin.HasSetting(grey_flags)">color_flags</include>
 						<include condition="Skin.HasSetting(grey_flags)">grey_flags</include>
 					</control>
@@ -98,7 +99,7 @@
 						<font>Font_Bartowski_Showcase_plot</font>
 						<textcolor>ffffffff</textcolor>
 						<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
-						<animation effect="slide" end="0,-100" time="0" condition="IsEmpty(Control.GetLabel(9170)) + IsEmpty(Control.GetLabel(9171))">conditional</animation>
+	<!--					<animation effect="slide" end="0,-100" time="0" condition="IsEmpty(Control.GetLabel(9170)) + IsEmpty(Control.GetLabel(9171))">conditional</animation> -->
 						<animation effect="slide" start="0,0" end="1200,0" time="400" delay="300" condition="Control.IsVisible(50)">conditional</animation>
 					</control>
 					<control type="textbox"><!-- Plot and TV -->
@@ -119,7 +120,7 @@
 		<control type="group"><!--movies-->
 			<visible>[!container.content(tvshows) + !container.content(episodes) + !container.content(musicvideos)]</visible>
 			<include>VisibleFadeEffect</include>
-			<!--<control type="grouplist">
+			<control type="grouplist">
 					<posx>680</posx>
 					<posy>610</posy>
 					<orientation>horizontal</orientation>
@@ -134,9 +135,9 @@
 					</control>
 					<control type="group">
 						<include>VideoMPAAFlaggingConditions</include>
-						<animation effect="slide" start="0,0" end="0,4" time="0" tween="cubic" easing="inout" condition="true">Conditional</animation>
+	<!--					<animation effect="slide" start="0,0" end="0,0" time="0" tween="cubic" easing="inout" condition="true">Conditional</animation> -->
 					</control>
-				</control>-->
+				</control>
 				<control type="group">
 					<posy>60</posy>
 					<animation effect="slide" start="0,0" end="1000,0" time="400" delay="300" condition="Control.IsVisible(50)">conditional</animation>
@@ -186,7 +187,7 @@
 						<ondown>61</ondown>
 						<pagecontrol>-</pagecontrol>
 						<scrolltime>200</scrolltime>
-						<animation effect="slide" end="0,-100" time="0" condition="IsEmpty(Control.GetLabel(9170)) + IsEmpty(Control.GetLabel(9171))">conditional</animation>
+	<!--					<animation effect="slide" end="0,-100" time="0" condition="IsEmpty(Control.GetLabel(9170)) + IsEmpty(Control.GetLabel(9171))">conditional</animation>  -->
 						<animation effect="slide" end="-1200,0" time="400" condition="Control.IsVisible(50)">conditional</animation>
 						<itemlayout height="30">
 							<control type="label">
@@ -243,9 +244,9 @@
 							</item>
 							<item>
 								<label>$LOCALIZE[563]:</label>
-								<label2>$INFO[ListItem.RatingAndVotes]</label2>
+								<label2>$INFO[ListItem.Rating]</label2>
 								<onclick>-</onclick>
-								<visible>!IsEmpty(ListItem.RatingAndVotes)</visible>
+								<visible>!IsEmpty(ListItem.Rating)</visible>
 							</item>
 <!--
 							<item>
