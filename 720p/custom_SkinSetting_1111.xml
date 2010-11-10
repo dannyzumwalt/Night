@@ -2484,13 +2484,14 @@
 							<aligny>top</aligny>
 						</control>
 -->
-<!--
+
 						<control type="radiobutton" id="513">
 							<include>skin_settings_labels</include>
-							<label>Use TV Themes in Library</label>
-							<onclick>Skin.ToggleSetting(tv_theme)</onclick>
-							<selected>Skin.HasSetting(tv_theme)</selected>
+							<label>Use TV Logos (Must download Logo Pack)</label>
+							<onclick>Skin.ToggleSetting(tv_logos)</onclick>
+							<selected>Skin.HasSetting(tv_logos)</selected>
 						</control>
+<!--
 						<control type="label" id="514">
 							<width>860</width>
 							<height>45</height>

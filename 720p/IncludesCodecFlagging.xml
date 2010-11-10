@@ -36,6 +36,16 @@
 		</control>
 	</include>
 	<include name="VideoTypeHackFlaggingConditions">
+		<control type="image">
+			<description>Rated </description>
+			<posx>10</posx>
+			<width>80</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>$INFO[ListItem.Property(mediaTag-contentRating),flagging/ratings/mpaa_,.png]</texture>
+			<colordiffuse>Text-Filemode</colordiffuse>
+			<visible>false</visible>
+		</control>
 	</include>
 	<include name="VideoMPAAFlaggingConditions_grey">
 		<control type="image">

@@ -122,7 +122,7 @@
 		<include>Viewtype_WallPanel</include><!--  597  -->
 		<include>Viewtype_16x9</include><!--  59  -->
 		<include>Viewtype_3dbanner</include><!--  593  -->
-<!--		<include>Viewtype_Logo</include>  --><!--  594  -->
+		<include>Viewtype_Logo</include>  <!--  594  -->
 		<include>Viewtype_Slide</include><!--  595  -->
 <!--		<include>Viewtype_Newest_Episodes</include>  --><!--  596  -->
 		<include>Viewtype_Poster_Half</include><!--  598  -->
@@ -261,7 +261,7 @@
 					<onclick>Skin.ToggleSetting(Wall_fanart)</onclick>
 					<selected>Skin.HasSetting(Wall_fanart)</selected>
 					<visible>Control.IsVisible(54)</visible>
-				</control>-->
+				</control>
 				<control type="togglebutton" id="24">
 					<description>Toggle MoviesFanart</description>
 					<include>WindowMenuButton</include>
@@ -271,7 +271,7 @@
 					<selected>Skin.HasSetting(ClearTitle)</selected>
 					<visible>Control.IsVisible(59) + Container.Content(tvshows)</visible>
 				</control>
-<!--
+
 				<control type="togglebutton" id="34">
 					<description>Toggle MoviesFanart</description>
 					<include>WindowMenuButton</include>
@@ -339,7 +339,7 @@
 			<control type="label">
 				<include>WindowMenuLabel</include>
 				<label>$LOCALIZE[14018]</label>
-				<visible>[Control.IsVisible(55) | Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(58)] + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] | [Control.IsVisible(50) + Container.Content(movies)] | [Control.IsVisible(59) + Container.Content(tvshows)] | [Control.IsVisible(55) + Container.Content(Genres)]</visible>		
+				<visible>[Control.IsVisible(55) | Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(58)] + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] | [Control.IsVisible(50) + Container.Content(movies)] | [Control.IsVisible(55) + Container.Content(Genres)]</visible>		
 			</control>
 			<control type="label">
 				<include>WindowMenuLabel</include>

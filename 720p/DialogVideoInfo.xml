@@ -22,9 +22,10 @@
 				<posy>20</posy>
 				<width>300</width>
 				<height>116</height>
-				<texture background="true">$INFO[ListItem.FileNameAndPath]logo.png</texture>
+				<texture background="true">../../logos/$INFO[ListItem.TVShowTitle].png</texture>
 				<fadetime>100</fadetime>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
+				<visible>Skin.HasSetting(tv_logos)</visible>
 			</control>
 			<control type="image"><!-- Floor -->
 				<posx>0</posx>
@@ -61,7 +62,7 @@
 						<label>[B]$INFO[Listitem.Title][/B] ($INFO[Listitem.Year])</label>
 						<align>center</align>
 						<textcolor>mainblue</textcolor>
-						<visible>IsEmpty(Control.GetLabel(9550))</visible>
+						<visible>!Skin.HasSetting(tv_logos)</visible>
 					</control>
 					<control type="label">
 						<posx>440</posx>

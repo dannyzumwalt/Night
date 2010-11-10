@@ -349,17 +349,17 @@
 			<label>$INFO[ListItem.Label]</label>
 		</control>
 		<control type="image" id="7017">
-			<visible>Container.Content(tvshows)</visible>
+			<visible>Container.Content(tvshows) + Skin.HasSetting(tv_logos)</visible>
 			<posx>160</posx>
 			<posy>300</posy>
 			<width>230</width>
 			<height>89</height>
-			<texture background="true">$INFO[ListItem.path]logo.png</texture>
+			<texture background="true">../../logos/$INFO[ListItem.Label].png</texture>
 			<fadetime>100</fadetime>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 		</control>
 		<control type="label">
-			<visible>Container.Content(tvshows) + IsEmpty(Control.GetLabel(7017))</visible>
+			<visible>Container.Content(tvshows) + !Skin.HasSetting(tv_logos)</visible>
 			<posx>15</posx>
 			<posy>320</posy>
 			<width>555</width>
@@ -370,7 +370,7 @@
 			<label>$INFO[ListItem.Label]</label>
 		</control>
 		<control type="label">
-			<visible>Container.Content(tvshows) + IsEmpty(Control.GetLabel(7017))</visible>
+			<visible>Container.Content(tvshows) + !Skin.HasSetting(tv_logos)</visible>
 			<posx>15</posx>
 			<posy>358</posy>
 			<width>555</width>
@@ -439,6 +439,31 @@
 			<font>Font_Bartowski_Showcase_plot</font>
 			<textcolor>ffffffff</textcolor>
 			<label>$INFO[ListItem.Plot]</label>
+			<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+			<include>Animation_Viewtype_Panel_BottomArea</include>
+		</control>
+		<control type="textbox">
+			<visible>Container.Content(Seasons) + ![Player.HasAudio]</visible>
+			<posx>15</posx>
+			<posy>390</posy>
+			<width>540</width>
+			<height>264</height>
+			<font>Font_Bartowski_Showcase_plot</font>
+			<textcolor>ffffffff</textcolor>
+			<label>$INFO[Container.Property(description)]</label>
+			<align>justify</align>
+			<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+			<include>Animation_Viewtype_Panel_BottomArea</include>
+		</control>
+		<control type="textbox">
+			<visible>Container.Content(Seasons) + [Player.HasAudio]</visible>
+			<posx>15</posx>
+			<posy>390</posy>
+			<width>540</width>
+			<height>170</height>
+			<font>Font_Bartowski_Showcase_plot</font>
+			<textcolor>ffffffff</textcolor>
+			<label>$INFO[Container.Property(description)]</label>
 			<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 			<include>Animation_Viewtype_Panel_BottomArea</include>
 		</control>

@@ -40,7 +40,7 @@
 		</control>
 		
 		<control type="panel" id="57">
-				<visible>!Skin.HasSetting(no_LandPanel) + Container.Content(episodes)]</visible>
+				<visible>!Skin.HasSetting(no_LandPanel) + Container.Content(episodes)</visible>
 				<posx>560</posx>
 				<posy>-126</posy><!-- -105 -->
 				<width>800</width>
@@ -233,16 +233,17 @@
 		<include>Animation_HiddenByInfo</include>
 		<visible>Control.IsVisible(57)</visible>	
 			<control type="image" id="7037">
-				<visible></visible>
+				<visible>Skin.HasSetting(tv_logos)</visible>
 				<posx>160</posx>
 				<posy>300</posy>
 				<width>230</width>
 				<height>89</height>
-				<texture background="true">$INFO[ListItem.path]lorgo.png</texture>
+				<texture background="true">../../logos/$INFO[ListItem.TVShowTitle].png</texture>
 				<fadetime>100</fadetime>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
 				<animation effect="slide" start="0,0" end="14,0" time="0" tween="cubic" easing="inout" condition="Container.Content(episodes)">Conditional</animation>
 			</control>
+<!--
 			<control type="image" id="9037">
 				<visible></visible>
 				<posx>160</posx>
@@ -254,8 +255,9 @@
 				<aspectratio scalediffuse="false">stretch</aspectratio>
 				<animation effect="slide" start="0,0" end="14,0" time="0" tween="cubic" easing="inout" condition="Container.Content(episodes)">Conditional</animation>
 			</control>
+-->
 			<control type="label">
-				<visible>IsEmpty(Control.GetLabel(7037)) + IsEmpty(Control.GetLabel(9037))</visible>
+				<visible>!Skin.HasSetting(tv_logos)</visible>
 				<posx>15</posx>
 				<posy>320</posy>
 				<width>555</width>
@@ -266,7 +268,7 @@
 				<label>$INFO[ListItem.TVShowTitle]</label>
 			</control>
 			<control type="label">
-				<visible>Container.Content(tvshows) + IsEmpty(Control.GetLabel(7037)) + IsEmpty(Control.GetLabel(9037))</visible>
+				<visible>Container.Content(tvshows) + !Skin.HasSetting(tv_logos)</visible>
 				<posx>15</posx>
 				<posy>358</posy>
 				<width>555</width>

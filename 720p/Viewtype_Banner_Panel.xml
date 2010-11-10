@@ -153,18 +153,18 @@
 	<include>Animation_Viewtype_Panel_Title</include>
 	<include>Animation_HiddenByInfo</include>
 	<visible>Control.IsVisible(592)</visible>
-		<control type="largeimage" id="7047">
-			<visible>Container.Content(tvshows)</visible>
+		<control type="image" id="7047">
+			<visible>Container.Content(tvshows) + Skin.HasSetting(tv_logos)</visible>
 			<posx>160</posx>
 			<posy>300</posy>
 			<width>230</width>
 			<height>89</height>
-			<texture>$INFO[ListItem.path]logo.png</texture>
+			<texture background="true" fallback="backgrounds/fallback.png">../../logos/$INFO[ListItem.TVShowTitle].png</texture>
 			<fadetime>100</fadetime>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 		</control>
 		<control type="label">
-			<visible>Container.Content(tvshows) + IsEmpty(Control.GetLabel(7047))</visible>
+			<visible>Container.Content(tvshows) + !Skin.HasSetting(tv_logos)</visible>
 			<posx>15</posx>
 			<posy>320</posy>
 			<width>555</width>
@@ -175,7 +175,7 @@
 			<label>$INFO[ListItem.Label]</label>
 		</control>
 		<control type="label">
-			<visible>Container.Content(tvshows) + IsEmpty(Control.GetLabel(7047))</visible>
+			<visible>Container.Content(tvshows) + !Skin.HasSetting(tv_logos)</visible>
 			<posx>15</posx>
 			<posy>358</posy>
 			<width>555</width>
