@@ -1239,13 +1239,13 @@
 						<onclick>Dialog.Close(ShutdownMenu,yes)</onclick>
 						<onclick>XBMC.SleepSystem()</onclick>
 					</control>
-<!--
+
 					<control type="button" id="90187">
 						<include>ButtonHomeSubCommonValues</include>
-						<label>13010</label>
-						<onclick>Hibernate()</onclick>
+						<label>31008</label>
+						<onclick>XBMC.ShutDownSystem()</onclick>
 					</control>
--->
+
 					<control type="button" id="90188">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>13313</label>
