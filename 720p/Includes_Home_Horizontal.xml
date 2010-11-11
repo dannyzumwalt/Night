@@ -134,21 +134,21 @@
 					<visible>!Skin.HasSetting(HomeMenuNoPicturesButton)</visible>
 				</item>
 				<item id="7">
-					<description>programs</description>
-					<label>0</label>
+					<description>Plex Online</description>
+					<label>Plex Online</label>
 					<icon>special://skin/media/backgrounds/games.png</icon>
 					<thumb>$INFO[Skin.String(CustomGamesFolder)]</thumb>				
-					<onclick>XBMC.ActivateWindow(MyPrograms)</onclick>
+		            <onclick>Plex.ActivateWindow(1,plex://localhost/system/appstore,return)</onclick>
 					<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
 				</item>
 <!--
 				<item id="10">
-					<description>Scripts</description>
+					<description>Programs</description>
 					<label>$LOCALIZE[247]</label>
 					<icon>special://skin/media/backgrounds/scripts.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomScriptsFolder)]</thumb>	
-					<onclick>XBMC.ActivateWindow(scripts)</onclick>
-					<visible>!Skin.HasSetting(HomeMenuNoScriptsButton)</visible>
+					<onclick>XBMC.ActivateWindow(MyPrograms)</onclick>
+					<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
 				</item>
 -->
 				<item id="18">
@@ -219,7 +219,7 @@
 					<ondown>Control.SetFocus(8000,0)</ondown>
 					<itemgap>0</itemgap>
 					<visible>Container(300).HasFocus(2)</visible>
-					<control type="button" id="90101">
+<!--				<control type="button" id="90101">
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
 						<label>$LOCALIZE[20342]</label>
 						<onclick>ActivateWindow(VideoLibrary,MovieTitles,return)</onclick>
@@ -231,7 +231,7 @@
 						<onclick>ActivateWindow(VideoLibrary,TvShowTitles,return)</onclick>
 						<visible>Library.HasContent(TVShows)</visible>
 					</control>
-					<!--<control type="button" id="90103">
+					<control type="button" id="90103">
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
 						<label>Music Videos</label>
 						<onclick>ActivateWindow(VideoLibrary,MusicVideoTitles,return)</onclick>
