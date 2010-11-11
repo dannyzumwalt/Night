@@ -4,6 +4,36 @@
 
 	<fontset id="Default" unicode="true">
 		
+	   <font>
+   	   <name>PlexNPArtistFont</name>
+   	   <filename>HelveticaNeue</filename>
+		<variant>Bold</variant>
+   	   <size>44</size>
+   	 </font>
+   	 <font>
+   	   <name>PlexNPTitleFont</name>
+   	   <filename>HelveticaNeue</filename>
+				<variant>Bold</variant>
+	      <size>32</size>
+   	 </font>
+   	 <font>
+      <name>ListView_ListTitle</name>
+      <filename>HelveticaNeue</filename>
+			<variant>Bold</variant>
+      <size>30</size>
+  	  </font>
+    <font>
+      <name>PlexNPAlbumFont</name>
+      <filename>HelveticaNeue</filename>
+			<variant>Regular</variant>
+      <size>32</size>
+    </font>
+    <font>
+      <name>PlexNPNextFont</name>
+      <filename>HelveticaNeue</filename>
+			<variant>Regular</variant>
+      <size>20</size>
+    </font>
 		<font>
 			<name>Font_Bartowski_MainMenu</name>
 			<filename>alaska_thin.ttf</filename>
