@@ -30,7 +30,7 @@
 			<viewtype label="$LOCALIZE[31048]">list</viewtype>
 			<orientation>horizontal</orientation>
 			<focusposition>1</focusposition>
-			<scrolltime>400</scrolltime>
+			<scrolltime>200</scrolltime>
 			<preloaditems>2</preloaditems>
 			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Bartowski_Context_Zoom</include>
@@ -68,6 +68,18 @@
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<visible>Container.Content(episodes)</visible>
 					</control>
+<!--
+					<control type="image">
+						<posx>2</posx>
+						<posy>122</posy>
+						<width>330</width>
+						<height>186</height>
+						<texture background="true" diffuse="postermatte.png" fallback="backgrounds/missing.jpg">$INFO[ListItem.Icon]</texture>
+						<fadetime>200</fadetime>					
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<visible>Window.IsActive(videofiles)</visible>
+					</control>
+-->
 					<control type="image">
 						<posx>0</posx>
 						<posy>90</posy>

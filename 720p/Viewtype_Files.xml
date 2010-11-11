@@ -387,7 +387,7 @@
 		<fadetime>100</fadetime>
 		<visible>Control.IsVisible(50) + IsEmpty(ListItem.Title) + ![Container.Content(movies) | Container.Content(Genres) | Container.Content(episodes) | Container.Content(albums) | Container.Content(songs)]</visible>
 	</control>-->
-	
+<!--	
 	<control type="group">	
 	<include>Animation_Viewtype_Files_RightArea</include>
 	<include>Animation_HiddenByInfo</include>
@@ -493,6 +493,7 @@
 			<visible>Container(50).OnPrevious + !Container.Content(songs)</visible>
 		</control>
 	</control>
+-->
 	<control type="group">
 	<include>Animation_HiddenByInfo</include>
 	<visible>Control.IsVisible(50) + !IsEmpty(ListItem.Title) + [Container.Content(tvshows) | Container.Content(seasons)]</visible>
@@ -566,6 +567,7 @@
 				<fadetime>200</fadetime>
 			</control>
 	</control>
+<!--
 	<control type="group">
 	<include>Animation_HiddenByInfo</include>
 	<visible>Control.IsVisible(50) + Window.IsActive(musicfiles)</visible>
@@ -581,7 +583,7 @@
 			<bordersize>5</bordersize>
 			<fadetime>100</fadetime>
 		</control>
-		<!--<control type="image">
+		<control type="image">
 			<posx>780</posx>
 			<posy>40</posy>
 			<width>500</width>
@@ -591,7 +593,7 @@
 			<bordertexture border="5">confluence/button-nofocus.png</bordertexture>
 			<bordersize>5</bordersize>
 			<fadetime>100</fadetime>
-		</control>-->
+		</control>
 		<control type="image">
 			<posx>770</posx>
 			<posy>370</posy>
@@ -623,6 +625,7 @@
 			<visible>Container(50).OnPrevious</visible>
 		</control>
 	</control>
+-->
 	<control type="group">
 	<posx>930</posx>
 	<posy>370</posy>
