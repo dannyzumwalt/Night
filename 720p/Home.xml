@@ -634,7 +634,7 @@
 		<control type="wraplist" id="300">
 			<posx>-131</posx>
 			<posy>100</posy>
-			<height>470</height>
+			<height>468</height>
 			<width>1541</width>
 			<onup>300</onup>
 			<ondown>300</ondown>
@@ -657,6 +657,18 @@
 					<textcolor>38b8b7b7</textcolor>
 					<label>$INFO[ListItem.label]</label>
 					<animation effect="slide" end="-600,0" time="300" condition="ControlGroup(9001).HasFocus">conditional</animation>
+					<visible>!Skin.HasSetting(AeonHomeMenu)</visible>
+ 				</control>			
+				<control type="label">
+					<width>500</width>
+					<height>61</height>
+					<posx>150</posx>
+					<posy>91</posy>
+					<font>AeonFont_MainMenu</font>
+					<textcolor>48b8b7b7</textcolor>
+					<label>$INFO[ListItem.label]</label>
+					<animation effect="slide" end="-600,0" time="300" condition="ControlGroup(9001).HasFocus">conditional</animation>
+					<visible>Skin.HasSetting(AeonHomeMenu)</visible>
 				</control>			
 			</itemlayout>
 			<focusedlayout width="741" height="121">
@@ -670,6 +682,19 @@
 					<shadowcolor>black</shadowcolor>
 					<label>$INFO[ListItem.label]</label>
 					<animation effect="slide" end="0,-300" time="300" condition="ControlGroup(9001).HasFocus">conditional</animation>
+					<visible>!Skin.HasSetting(AeonHomeMenu)</visible>
+				</control>
+				<control type="label">
+					<width>741</width>
+					<height>341</height>
+					<posx>150</posx>
+					<posy>97</posy>
+					<font>AeonFont_MainMenu_Focus</font>
+					<textcolor>ffffffff</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<label>$INFO[ListItem.label]</label>
+					<animation effect="slide" end="0,-300" time="300" condition="ControlGroup(9001).HasFocus">conditional</animation>
+					<visible>Skin.HasSetting(AeonHomeMenu)</visible>
 				</control>
 			</focusedlayout>
 			<content>

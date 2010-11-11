@@ -3,6 +3,16 @@
 <fonts>
 
 	<fontset id="Default" unicode="true">
+		<font>
+			<name>AeonFont_MainMenu</name>
+			<filename>aeon_main.ttf</filename>
+			<size>60</size>
+		</font>
+		<font>
+			<name>AeonFont_MainMenu_Focus</name>
+			<filename>aeon_main.ttf</filename>
+			<size>100</size>
+		</font>
 		
 	   <font>
    	   <name>PlexNPArtistFont</name>

@@ -625,6 +625,10 @@
 	</include>
 	
 	<include name="ButtonHomeSubCommonValues">
+		<include condition="!Skin.HasSetting(AeonHomeMenu)">ButtonHomeSubCommonValues2</include>
+		<include condition="Skin.HasSetting(AeonHomeMenu)">ButtonHomeSubCommonValues3</include>
+	</include>
+	<include name="ButtonHomeSubCommonValues2">
 		<width>600</width>
 		<height>56</height>
 		<textoffsetx>20</textoffsetx>
@@ -635,10 +639,32 @@
 		<textcolor>38b8b7b7</textcolor>
 		<focusedcolor>mainblue</focusedcolor>
 	</include>
+	<include name="ButtonHomeSubCommonValues3">
+		<width>600</width>
+		<height>56</height>
+		<textoffsetx>20</textoffsetx>
+		<textwidth>600</textwidth>
+		<posx>150</posx>
+		<posy>91</posy>
+		<font>AeonFont_MainMenu</font>
+		<textcolor>38b8b7b7</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+	</include>
 	<include name="ButtonHomeSubCommonValues_Horizontal">
+		<include condition="!Skin.HasSetting(AeonHomeMenu)">ButtonHomeSubCommonValues2</include>
+		<include condition="Skin.HasSetting(AeonHomeMenu)">ButtonHomeSubCommonValues3</include>
+	</include>
+	<include name="ButtonHomeSubCommonValues_Horizontal2">
 		<width>320</width>
 		<height>56</height>
 		<font>Font_Bartowski_Main_SubMenu</font>
+		<textcolor>ffb8b7b7</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+	</include>
+	<include name="ButtonHomeSubCommonValues_Horizontal3">
+		<width>320</width>
+		<height>56</height>
+		<font>AeonFont_MainMenu</font>
 		<textcolor>ffb8b7b7</textcolor>
 		<focusedcolor>mainblue</focusedcolor>
 	</include>

@@ -441,15 +441,15 @@
 						<selected>Skin.HasSetting(horizontal_bottom_align)</selected>
 						<visible>Skin.HasSetting(horizontal_home)</visible>
 					</control>
-
-					<control type="radiobutton" id="203">
-						<description>Show Recently added info</description>
-						<include>skin_settings_labels</include>
-						<label>31117</label>
-						<onclick>Skin.ToggleSetting(homepageHideRecentlyAdded)</onclick>
-						<selected>Skin.HasSetting(homepageHideRecentlyAdded)</selected>
-					</control>
 -->
+					<control type="radiobutton" id="203">
+						<description>Aeon Home Font</description>
+						<include>skin_settings_labels</include>
+						<label>33069</label>
+						<onclick>Skin.ToggleSetting(AeonHomeMenu)</onclick>
+						<selected>Skin.HasSetting(AeonHomeMenu)</selected>
+					</control>
+
 					<control type="radiobutton" id="204">
 						<description>Global Ken Burns</description>
 						<width>860</width>
