@@ -4,6 +4,17 @@
 	<include name="Viewtype_16x9">
 
 		<!-- Poster Wrap View -->
+		<control type="image">
+			<visible>Control.IsVisible(59)</visible>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>tv-landscape/tv-background.png</texture>
+			<aspectratio>stretch</aspectratio>
+			<include>Animation_BackdropFade</include>
+		</control>
+		
 		
 		<include>Music_Global_TopRight_Music_Showcase</include>
 		
