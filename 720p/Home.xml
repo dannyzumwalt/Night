@@ -919,7 +919,7 @@
 					<onup>9010</onup>
 					<ondown>9010</ondown>
 					<itemgap>0</itemgap>
-					<visible>Container(300).HasFocus(2)</visible>
+					<visible>false</visible>
 					<control type="button" id="90101">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$LOCALIZE[20342]</label>
@@ -1067,7 +1067,7 @@
 					<onup>9014</onup>
 					<ondown>9014</ondown>
 					<itemgap>0</itemgap>
-					<visible>Container(300).HasFocus(9)</visible>
+					<visible>false</visible>
 					<control type="button" id="90141">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>5</label>
@@ -1166,7 +1166,7 @@
 					<onup>9017</onup>
 					<ondown>9017</ondown>
 					<itemgap>0</itemgap>
-					<visible>Container(300).HasFocus(1)</visible>
+					<visible>false</visible>
 					<control type="button" id="90171">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$LOCALIZE[133]</label>

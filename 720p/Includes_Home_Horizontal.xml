@@ -245,7 +245,7 @@
 					<onup>300</onup>
 					<ondown>Control.SetFocus(8000,0)</ondown>
 					<itemgap>0</itemgap>
-					<visible>Container(300).HasFocus(2)</visible>
+					<visible>false</visible>
 <!--				<control type="button" id="90101">
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
 						<label>$LOCALIZE[20342]</label>
@@ -399,7 +399,7 @@
 					<onup>300</onup>
 					<ondown>300</ondown>
 					<itemgap>0</itemgap>
-					<visible>Container(300).HasFocus(9)</visible>
+					<visible>false</visible>
 					<control type="button" id="90141">
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
 						<label>5</label>
@@ -501,7 +501,7 @@
 					<onleft>9017</onleft>
 					<onright>9017</onright>
 					<onup>300</onup>
-					<ondown>Control.SetFocus(8002,0)</ondown>
+					<ondown>false</ondown>
 					<itemgap>0</itemgap>
 					<visible>Container(300).HasFocus(1)</visible>
 					<control type="button" id="90171">
@@ -560,20 +560,31 @@
 					<itemgap>0</itemgap>
 					<visible>Container(300).HasFocus(8) | Container(300).HasFocus(14)</visible>
 					<control type="button" id="90181">
-						<include>ButtonHomeSubCommonValues_Horizontal</include>
+						<label>$LOCALIZE[8] $LOCALIZE[5]</label>
+						<include>ButtonHomeSubCommonValues</include>
+						<onclick>ActivateWindow(weathersettings)</onclick>
+					</control>
+					<control type="button" id="90182">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>5</label>
+						<onclick>ActivateWindow(Settings)</onclick>
+					</control>
+<!--					<control type="button" id="90181">
+						<include>ButtonHomeSubCommonValues</include>
 						<label>143</label>
 						<onclick>Skin.SetString(Weather,1)</onclick>
 					</control>	
 					<control type="button" id="90182">
-						<include>ButtonHomeSubCommonValues_Horizontal</include>
+						<include>ButtonHomeSubCommonValues</include>
 						<label>$LOCALIZE[31254]</label>
 						<onclick>Skin.SetString(Weather,2)</onclick>
 					</control>
 					<control type="button" id="90183">
-						<include>ButtonHomeSubCommonValues_Horizontal</include>
+						<include>ButtonHomeSubCommonValues</include>
 						<label>$LOCALIZE[31255]</label>
 						<onclick>Skin.SetString(Weather,3)</onclick>
 					</control>
+-->
 				</control>
 <!--Shutdown --><control type="grouplist" id="9019">
 					<posx>10</posx>
@@ -589,37 +600,49 @@
 					<itemgap>0</itemgap>
 					<visible>Container(300).HasFocus(13)</visible>
 					<control type="button" id="90184">
-						<include>ButtonHomeSubCommonValues_Horizontal</include>
+						<include>ButtonHomeSubCommonValues</include>
 						<label>$LOCALIZE[31242]</label>
-						<onclick>AlarmClock(shutdowntimer,Shutdown)</onclick>>
+						<onclick>AlarmClock(,Shutdown,)</onclick>
 					</control>
 					<control type="button" id="90185">
-						<include>ButtonHomeSubCommonValues_Horizontal</include>
+						<include>ButtonHomeSubCommonValues</include>
 						<label>$LOCALIZE[31243]</label>
 						<onclick>CancelAlarm(ShutdownTimer)</onclick>
 						<visible>System.HasAlarm(ShutdownTimer)</visible>
 					</control>
 					<control type="button" id="90186">
-						<include>ButtonHomeSubCommonValues_Horizontal</include>
+						<include>ButtonHomeSubCommonValues</include>
 						<label>13011</label>
 						<onclick>Dialog.Close(ShutdownMenu,yes)</onclick>
-						<onclick>Suspend()</onclick>
+						<onclick>XBMC.SleepSystem()</onclick>
 					</control>
+
 					<control type="button" id="90187">
-						<include>ButtonHomeSubCommonValues_Horizontal</include>
-						<label>13010</label>
-						<onclick>Hibernate()</onclick>
+						<include>ButtonHomeSubCommonValues</include>
+						<label>31008</label>
+						<onclick>XBMC.ShutDownSystem()</onclick>
 					</control>
+
 					<control type="button" id="90188">
-						<include>ButtonHomeSubCommonValues_Horizontal</include>
+						<include>ButtonHomeSubCommonValues</include>
 						<label>13313</label>
-						<onclick>RestartApp()</onclick>
+						<onclick>XBMC.ReloadSkin()</onclick>
+					</control>
+					<control type="button" id="90190">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>5</label>
+						<onclick>ActivateWindow(Settings)</onclick>
 					</control>
 					<control type="button" id="90189">
-						<include>ButtonHomeSubCommonValues_Horizontal</include>
+						<include>ButtonHomeSubCommonValues</include>
 						<label>13012</label>
 						<onclick>XBMC.Quit()</onclick>
 					</control>
+					<!--<control type="button" id="90190">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>Shutdown</label>
+						<onclick>ShutDown()</onclick>
+					</control>-->
 				</control>
 				<control type="grouplist" id="9020">
 					<posx>10</posx>
