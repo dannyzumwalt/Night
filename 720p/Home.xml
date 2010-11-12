@@ -1221,6 +1221,16 @@
 					<itemgap>0</itemgap>
 					<visible>Container(300).HasFocus(8) | Container(300).HasFocus(14)</visible>
 					<control type="button" id="90181">
+						<label>$LOCALIZE[8] $LOCALIZE[5]</label>
+						<include>ButtonHomeSubCommonValues</include>
+						<onclick>ActivateWindow(weathersettings)</onclick>
+					</control>
+					<control type="button" id="90182">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>5</label>
+						<onclick>ActivateWindow(Settings)</onclick>
+					</control>
+<!--					<control type="button" id="90181">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>143</label>
 						<onclick>Skin.SetString(Weather,1)</onclick>
@@ -1235,6 +1245,7 @@
 						<label>$LOCALIZE[31255]</label>
 						<onclick>Skin.SetString(Weather,3)</onclick>
 					</control>
+-->
 				</control>
 <!--Shutdown --><control type="grouplist" id="9019">
 					<posx>10</posx>
