@@ -784,6 +784,7 @@
 							</control>
 						</focusedlayout>
 						<content>
+<!--
 							<item id="19">
 								<label>$INFO[Skin.String(Menu_Custom4_Label)]</label>
 								<onclick>-</onclick>
@@ -854,32 +855,37 @@
 								<thumb>$INFO[Skin.String(Menu_Custom1_Folder)]</thumb>
 								<visible>Skin.HasSetting(Menu_Custom1)</visible>
 							</item>
+-->
 							<item id="1">
 								<label>3</label><!-- Videos -->
 								<onclick>-</onclick>
 								<icon>backgrounds/videos.jpg</icon>
 								<thumb>$INFO[Skin.String(CustomVideoFolder)]</thumb>
 							</item>
+<!-- movies --><!--
 							<item id="10">
-								<label>20342</label><!-- movies -->
+								<label>20342</label>
 								<onclick>-</onclick>
 								<icon>backgrounds/movies.jpg</icon>
 								<thumb>$INFO[Skin.String(CustomMoviesFolder)]</thumb>
 								<visible>Library.HasContent(Movies)</visible>
 							</item>
+-->
 							<item id="4">
-								<label>$LOCALIZE[31280]</label>
+								<label>Plex Online</label>
 								<onclick>-</onclick>
 								<icon>backgrounds/programs.jpg</icon>
 								<thumb>$INFO[Skin.String(CustomGamesFolder)]</thumb>
 							</item>
-							<item id="11">
-								<label>20343</label><!-- tv shows -->
+<!-- tv shows -->
+<!--							<item id="11">
+								<label>20343</label>
 								<onclick>-</onclick>
 								<icon>backgrounds/tvshows.jpg</icon>
 								<thumb>$INFO[Skin.String(CustomTVShowsFolder)]</thumb>
 								<visible>Library.HasContent(TVShows)</visible>
 							</item>
+-->
 							<item id="2">
 								<label>2</label>
 								<onclick>-</onclick>
@@ -899,12 +905,14 @@
 								<icon>backgrounds/weather.jpg</icon>
 								<thumb>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</thumb>
 							</item>
+<!--
 							<item id="6">
 								<label>247</label>
 								<onclick>-</onclick>
 								<icon>backgrounds/scripts.jpg</icon>
 								<thumb>$INFO[Skin.String(Home_Custom_Back_Scripts_Folder)]</thumb>
 							</item>
+-->
 							<item id="18">
 								<label>1036</label>
 								<onclick>-</onclick>
@@ -912,7 +920,7 @@
 								<thumb>$INFO[Skin.String(CustomfavouritesFolder)]</thumb>
 							</item>
 							<item id="7">
-								<label>13000</label>
+								<label>5</label>
 								<onclick>-</onclick>
 								<icon>backgrounds/settings.jpg</icon>
 								<thumb>$INFO[Skin.String(CustomSettingsFolder)]</thumb>
