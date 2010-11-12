@@ -857,6 +857,7 @@
 					<icon>backgrounds/settings.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomSettingsFolder)]</thumb>			
 					<onclick>XBMC.ActivateWindow(4)</onclick>
+					<visible>!Skin.HasSetting(HomeMenuNoSettingsButton)</visible>
 				</item>
 				<!--<item id="12">
 					<include>BackgroundVarsSignOut</include>					
@@ -1274,6 +1275,11 @@
 						<include>ButtonHomeSubCommonValues</include>
 						<label>13313</label>
 						<onclick>XBMC.ReloadSkin()</onclick>
+					</control>
+					<control type="button" id="90190">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>5</label>
+						<onclick>ActivateWindow(Settings)</onclick>
 					</control>
 					<control type="button" id="90189">
 						<include>ButtonHomeSubCommonValues</include>
