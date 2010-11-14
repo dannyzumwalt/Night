@@ -219,8 +219,8 @@
 			<animation effect="slide" start="0,0" end="0,50" time="0" condition="Skin.HasSetting(TV_logos)">Conditional</animation>
 			<control type="image" id="7037">
 				<visible>Skin.HasSetting(tv_logos)</visible>
-				<posx>90</posx>
-				<posy>185</posy>
+				<posx>100</posx>
+				<posy>190</posy>
 				<width>230</width>
 				<height>89</height>
 				<texture background="true">../../logos/$INFO[ListItem.TVShowTitle].png</texture>
@@ -259,6 +259,7 @@
 				<textcolor>ffffffff</textcolor>
 				<label>$INFO[ListItem.Duration] $LOCALIZE[12391]</label>
 				<visible>!IsEmpty(ListItem.Duration) + !SubString(ListItem.Duration,min)</visible>
+				<visible>!Skin.HasSetting(TV_logos)</visible>
 			</control>
 			<control type="label"><!--Duration-->
 				<posx>15</posx>
@@ -280,6 +281,7 @@
 				<font>Font_RSS_Big</font>
 				<textcolor>ffffffff</textcolor>
 				<label>$INFO[ListItem.year]</label>
+				<visible>!Skin.HasSetting(TV_logos)</visible>
 				<animation effect="slide" start="0,0" end="0,-23" time="0" condition="IsEmpty(ListItem.Duration)">Conditional</animation>
 			</control>
 			<control type="group">
