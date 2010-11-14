@@ -6,7 +6,7 @@
 		
 		
 		<control type="image">
-			<visible>Control.IsVisible(58) + Container.Content(movies)</visible>
+			<visible>Control.IsVisible(58) + [Container.Content(movies) | Container.Content(TVShows)]</visible>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
@@ -15,9 +15,9 @@
 			<include>Animation_BackdropFade</include>
 		</control>
 		<control type="label">
-			<visible>Control.IsVisible(58) + Container.Content(movies) + IsEmpty(ListItem.Title)</visible>
-			<animation effect="slide" start="0,0" end="0,-70" time="1000" delay="600" tween="cubic" easing="inout" condition="Control.IsVisible(58) + Container.Content(movies) + Skin.HasSetting(ShowcaseFanart)">Conditional</animation>
-			<animation effect="slide" start="0,0" end="0,-110" time="1000" delay="600" tween="cubic" easing="inout" condition="Control.IsVisible(58) + Container.Content(movies)">Conditional</animation>
+			<visible>Control.IsVisible(58) + [Container.Content(movies) | Container.Content(TVShows)] + IsEmpty(ListItem.Title)</visible>
+			<animation effect="slide" start="0,0" end="0,-70" time="1000" delay="600" tween="cubic" easing="inout" condition="Control.IsVisible(58) + [Container.Content(movies) | Container.Content(TVShows)] + Skin.HasSetting(ShowcaseFanart)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-110" time="1000" delay="600" tween="cubic" easing="inout" condition="Control.IsVisible(58) + [Container.Content(movies) | Container.Content(TVShows)]">Conditional</animation>
 			<posx>0</posx>
 			<posy>370</posy>
 			<width>1280</width>
@@ -31,9 +31,9 @@
 			<include>Animation_HiddenByInfo</include>
 		</control>
 		<control type="label">
-			<visible>Control.IsVisible(58) + Container.Content(movies) + Skin.HasSetting(ShowcaseFanart) + Skin.HasSetting(showcase_fanart_title)</visible>
-			<animation effect="slide" start="0,0" end="0,-70" time="1000" delay="600" tween="cubic" easing="inout" condition="Control.IsVisible(58) + Container.Content(movies) + Skin.HasSetting(ShowcaseFanart)">Conditional</animation>
-			<animation effect="slide" start="0,0" end="0,-110" time="1000" delay="600" tween="cubic" easing="inout" condition="Control.IsVisible(58) + Container.Content(movies)">Conditional</animation>
+			<visible>Control.IsVisible(58) + [Container.Content(movies) | Container.Content(TVShows)] + Skin.HasSetting(ShowcaseFanart) + Skin.HasSetting(showcase_fanart_title)</visible>
+			<animation effect="slide" start="0,0" end="0,-70" time="1000" delay="600" tween="cubic" easing="inout" condition="Control.IsVisible(58) + [Container.Content(movies) | Container.Content(TVShows)] + Skin.HasSetting(ShowcaseFanart)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-110" time="1000" delay="600" tween="cubic" easing="inout" condition="Control.IsVisible(58) + [Container.Content(movies) | Container.Content(TVShows)]">Conditional</animation>
 			<posx>0</posx>
 			<posy>470</posy>
 			<width>1280</width>
@@ -49,7 +49,7 @@
 		
 		
 		<control type="image">
-			<visible>Control.IsVisible(58) + Container.Content(movies) + !Player.HasVideo + !Skin.HasSetting(ShowcaseFanart) + !IsEmpty(ListItem.Title)</visible>
+			<visible>Control.IsVisible(58) + [Container.Content(movies) | Container.Content(TVShows)] + !Player.HasVideo + !Skin.HasSetting(ShowcaseFanart) + !IsEmpty(ListItem.Title)</visible>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>436</width>
@@ -80,7 +80,7 @@
 			<pagecontrol>68</pagecontrol>
 			<include>Animation_Viewtype_Showcase_FocusArea</include>
 			<include>Animation_HiddenByInfo</include>
-			<visible>!Skin.HasSetting(no_Showcase) + Container.Content(movies) + !substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite)</visible>
+			<visible>!Skin.HasSetting(no_Showcase) + [Container.Content(movies) | Container.Content(TVShows)]</visible>
 			<itemlayout width="168" height="245">
 				<control type="image">
 					<posx>1</posx>
@@ -90,7 +90,7 @@
 					<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
 					<fadetime>200</fadetime>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<animation effect="slide" start="0,0" end="0,20" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(58) + Container.Content(movies) + Skin.HasSetting(ShowcaseFanart)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,20" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(58) + [Container.Content(movies) | Container.Content(TVShows)] + Skin.HasSetting(ShowcaseFanart)">Conditional</animation>
 				</control>
 				<control type="image">
 					<posx>-8</posx>
@@ -99,7 +99,7 @@
 					<height>260</height>
 					<texture>posterframeF.png</texture>
 					<colordiffuse>39FFFFFF</colordiffuse>
-					<animation effect="slide" start="0,0" end="0,20" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(58) + Container.Content(movies) + Skin.HasSetting(ShowcaseFanart)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,20" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(58) + [Container.Content(movies) | Container.Content(TVShows)] + Skin.HasSetting(ShowcaseFanart)">Conditional</animation>
 				</control>
 				<control type="image">
 					<posx>1</posx>
@@ -110,7 +110,7 @@
 					<colordiffuse>69FFFFFF</colordiffuse>
 					<fadetime>200</fadetime>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<animation effect="slide" start="0,0" end="0,20" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(58) + Container.Content(movies) + Skin.HasSetting(ShowcaseFanart)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,20" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(58) + [Container.Content(movies) | Container.Content(TVShows)] + Skin.HasSetting(ShowcaseFanart)">Conditional</animation>
 				</control>
 				<control type="image">
 					<posx>100</posx>
@@ -118,13 +118,13 @@
 					<width>80</width>
 					<height>60</height>
 					<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
-					<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+					<visible>[Container.Content(Movies) + Skin.HasSetting(movieoverlays)] | [Container.Content(TVShows) + Skin.HasSetting(tvoverlays)]</visible>
 				</control>
 			</itemlayout>
 			
 			<focusedlayout width="210" height="515">
 				<control type="group">	
-				<animation effect="slide" start="0,0" end="0,30" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(58) + Container.Content(movies) + Skin.HasSetting(ShowcaseFanart)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,30" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(58) + [Container.Content(movies) | Container.Content(TVShows)] + Skin.HasSetting(ShowcaseFanart)">Conditional</animation>
 					<control type="image">
 						<posx>-94</posx>
 						<posy>24</posy>
@@ -181,7 +181,7 @@
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="90,258" start="81" end="100" time="300" tween="back" easing="out" />
 						</animation>
-						<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+					<visible>[Container.Content(Movies) + Skin.HasSetting(movieoverlays)] | [Container.Content(TVShows) + Skin.HasSetting(tvoverlays)]</visible>
 					</control>
 				</control>
 			</focusedlayout>
@@ -190,7 +190,7 @@
 		
 		
 		<control type="textbox">
-			<visible>Control.IsVisible(58) + Container.Content(movies) + !Skin.HasSetting(ShowcaseFanart)</visible>
+			<visible>Control.IsVisible(58) + [Container.Content(movies) | Container.Content(TVShows)] + !Skin.HasSetting(ShowcaseFanart)</visible>
 			<posx>460</posx>
 			<posy>25</posy>
 			<width>540</width>
@@ -204,7 +204,7 @@
 			<include>Animation_Viewtype_Showcase_Plot</include>
 		</control>
 		<control type="image"><!-- Floor -->
-			<visible>Control.IsVisible(58) + Container.Content(movies) + !Skin.HasSetting(ShowcaseFanart)</visible>
+			<visible>Control.IsVisible(58) + [Container.Content(movies) | Container.Content(TVShows)] + !Skin.HasSetting(ShowcaseFanart)</visible>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
@@ -213,9 +213,20 @@
 		</control>
 		
 		<control type="group">
-			<visible>Control.IsVisible(58) + Container.Content(movies) + !IsEmpty(ListItem.Title) + !Skin.HasSetting(ShowcaseFanart)</visible>
+			<visible>Control.IsVisible(58) + [Container.Content(movies) | Container.Content(TVShows)] + !IsEmpty(ListItem.Title) + !Skin.HasSetting(ShowcaseFanart)</visible>
 			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Viewtype_Showcase_LeftArea</include>
+			<animation effect="slide" start="0,0" end="0,50" time="0" condition="Skin.HasSetting(TV_logos)">Conditional</animation>
+			<control type="image" id="7037">
+				<visible>Skin.HasSetting(tv_logos)</visible>
+				<posx>90</posx>
+				<posy>185</posy>
+				<width>230</width>
+				<height>89</height>
+				<texture background="true">../../logos/$INFO[ListItem.TVShowTitle].png</texture>
+				<fadetime>100</fadetime>
+				<aspectratio scalediffuse="false">stretch</aspectratio>
+			</control>
 			<control type="label"><!--Movie title-->
 				<posx>15</posx>
 				<posy>245</posy>
@@ -225,6 +236,7 @@
 				<font>Font_Bartowski_Showcase_Title</font>
 				<textcolor>mainblue</textcolor>
 				<label>$INFO[ListItem.Label]</label>
+				<visible>!Skin.HasSetting(TV_logos)</visible>
 			</control>
 			<control type="label">
 				<posx>15</posx>
@@ -279,7 +291,7 @@
 			</control>
 		</control>	
 		<control type="label"><!--Trailer Start-->
-			<visible>Control.IsVisible(58) + Container.Content(movies) + !IsEmpty(ListItem.Trailer) + !Player.HasVideo + !Skin.HasSetting(ShowcaseFanart)</visible>
+			<visible>Control.IsVisible(58) + [Container.Content(movies) | Container.Content(TVShows)] + !IsEmpty(ListItem.Trailer) + !Player.HasVideo + !Skin.HasSetting(ShowcaseFanart)</visible>
 			<posx>20</posx>
 			<posy>320</posy>
 			<width>370</width>
@@ -294,7 +306,7 @@
 			<animation effect="fade"  start="0" end="100" time="400" delay="1000" condition="![Container(58).OnNext | Container(58).OnPrevious]">Conditional</animation>
 		</control>	
 		<control type="label"><!--Trailer Stop-->
-			<visible>Control.IsVisible(58) + Container.Content(movies) + Player.HasVideo + !Skin.HasSetting(ShowcaseFanart)</visible>
+			<visible>Control.IsVisible(58) + [Container.Content(movies) | Container.Content(TVShows)] + Player.HasVideo + !Skin.HasSetting(ShowcaseFanart)</visible>
 			<posx>20</posx>
 			<posy>320</posy>
 			<width>370</width>
@@ -309,7 +321,7 @@
 <!--Plot and extrathumbs-->
 			
 		<control type="grouplist">
-			<visible>Control.IsVisible(58) + Container.Content(movies) + !IsEmpty(ListItem.Title) + !Skin.HasSetting(extrathumbs) + !Skin.HasSetting(ShowcaseFanart) </visible>
+			<visible>Control.IsVisible(58) + [Container.Content(movies) | Container.Content(TVShows)] + !IsEmpty(ListItem.Title) + !Skin.HasSetting(extrathumbs) + !Skin.HasSetting(ShowcaseFanart) </visible>
 			<posx>1020</posx>
 			<posy>22</posy>
 			<itemgap>0</itemgap>
@@ -323,6 +335,7 @@
 					<font>Font_Bartowski_Showcase_Right_Main</font>
 					<textcolor>mainbluedarker</textcolor>
 					<label>$LOCALIZE[20339]</label>
+					<visible>Container.Content(movies)</visible>
 				</control>
 				<control type="label"><!--Director-->
 					<posx>0</posx>
@@ -332,6 +345,27 @@
 					<font>Font_Bartowski_Showcase_Right_Under</font>
 					<textcolor>ffffffff</textcolor>
 					<label fallback="Not Available">$INFO[ListItem.Director]</label>
+					<visible>Container.Content(movies)</visible>
+				</control>
+				<control type="label"><!--Episodes-->
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>390</width>
+					<height>24</height>
+					<font>Font_Bartowski_Showcase_Right_Main</font>
+					<textcolor>mainbluedarker</textcolor>
+					<label>$LOCALIZE[20360]</label>
+					<visible>Container.Content(TVShows)</visible>
+				</control>
+				<control type="label"><!--Episodes-->
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>390</width>
+					<height>24</height>
+					<font>Font_Bartowski_Showcase_Right_Under</font>
+					<textcolor>ffffffff</textcolor>
+					<label fallback="Not Available">$INFO[ListItem.Episode]</label>
+					<visible>Container.Content(TVShows)</visible>
 				</control>
 				<control type="label">
 					<posx>0</posx>
@@ -350,6 +384,7 @@
 					<font>Font_Bartowski_Showcase_Right_Main</font>
 					<textcolor>mainbluedarker</textcolor>
 					<label>$LOCALIZE[20417]</label>
+					<visible>Container.Content(movies)</visible>
 				</control>
 				<control type="label"><!--Writer-->
 					<posx>0</posx>
@@ -359,6 +394,27 @@
 					<font>Font_Bartowski_Showcase_Right_Under</font>
 					<textcolor>ffffffff</textcolor>
 					<label fallback="Not Available">$INFO[ListItem.Writer]</label>
+					<visible>Container.Content(movies)</visible>
+				</control>
+				<control type="label"><!--Aired-->
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>390</width>
+					<height>24</height>
+					<font>Font_Bartowski_Showcase_Right_Main</font>
+					<textcolor>mainbluedarker</textcolor>
+					<label>$LOCALIZE[20416]</label>
+					<visible>Container.Content(TVShows)</visible>
+				</control>
+				<control type="label"><!--Aired-->
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>390</width>
+					<height>24</height>
+					<font>Font_Bartowski_Showcase_Right_Under</font>
+					<textcolor>ffffffff</textcolor>
+					<label fallback="Not Available">$INFO[ListItem.Date]</label>
+					<visible>Container.Content(TVShows)</visible>
 				</control>
 				<control type="label"><!--Director-->
 					<posx>0</posx>
@@ -444,7 +500,7 @@
 		</control>
 		
 		<control type="group">
-		<visible>Control.IsVisible(58) + Container.Content(movies) + !IsEmpty(ListItem.Title) + Skin.HasSetting(extrathumbs) + !Skin.HasSetting(ShowcaseFanart)</visible>
+		<visible>Control.IsVisible(58) + [Container.Content(movies) | Container.Content(TVShows)] + !IsEmpty(ListItem.Title) + Skin.HasSetting(extrathumbs) + !Skin.HasSetting(ShowcaseFanart)</visible>
 		<include>Animation_Viewtype_Showcase_RightArea</include>
 		<include>Animation_HiddenByInfo</include>		
 			<control type="image">
@@ -483,7 +539,7 @@
 		
 			
 		<control type="grouplist">
-			<visible>Control.IsVisible(58) + Container.Content(movies) + !Skin.HasSetting(no_media_flags) + !Skin.HasSetting(ShowcaseFanart)</visible>
+			<visible>Control.IsVisible(58) + [Container.Content(movies) | Container.Content(TVShows)] + !Skin.HasSetting(no_media_flags) + !Skin.HasSetting(ShowcaseFanart)</visible>
 			<description>Media Codec Flagging Images</description>
 			<posx>0</posx>
 			<posy>370</posy>
