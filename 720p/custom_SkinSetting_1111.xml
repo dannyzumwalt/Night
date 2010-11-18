@@ -2500,6 +2500,14 @@
 							<onclick>Skin.ToggleSetting(tv_logos)</onclick>
 							<selected>Skin.HasSetting(tv_logos)</selected>
 						</control>
+
+			<control type="button" id="514">
+							<include>skin_settings_labels</include>
+				<label>Set Logo Folder</label>
+				<label2>$INFO[Skin.String(CustomLogoFolder)]</label2>
+				<onclick>Skin.SetPath(CustomLogoFolder,,)</onclick>
+				<visible>Skin.HasSetting(tv_logos)</visible>
+			</control>
 <!--
 						<control type="label" id="514">
 							<width>860</width>

@@ -746,7 +746,7 @@
 			<posy>0</posy>
 			<width>230</width>
 			<height>89</height>
-			<texture background="true">../../logos/$INFO[ListItem.TVShowtitle].png</texture>
+			<include>TVLogosTitle</include>
 			<fadetime>100</fadetime>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<include>Animation_HiddenByInfo</include>
@@ -758,7 +758,7 @@
 			<posy>0</posy>
 			<width>230</width>
 			<height>89</height>
-			<texture background="true">../../logos/$INFO[Container.SecondTitle].png</texture>
+			<include>TVLogosSecondTitle</include>
 			<fadetime>100</fadetime>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<include>Animation_HiddenByInfo</include>

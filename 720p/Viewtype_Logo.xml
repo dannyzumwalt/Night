@@ -61,11 +61,10 @@
 						<posy>0</posy>
 						<width>230</width>
 						<height>89</height>
-						<texture background="true" fallback="backgrounds/fallback.png">../../logos/$INFO[ListItem.TVShowTitle].png</texture>
+		<icon>$INFO[Skin.String(CustomLogoFolder)]/$INFO[ListItem.TVShowTitle].png</icon>
 						<fadetime>100</fadetime>
 						<aspectratio scalediffuse="false">keep</aspectratio>
 						<animation effect="fade" start="50" end="50" time="0" condition="true">conditional</animation>
-						<visible>!IsEmpty(ListItem.Title)</visible>
 					</control>
 				</control>
 			</itemlayout>

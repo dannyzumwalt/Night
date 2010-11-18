@@ -40,6 +40,14 @@
 	<include file="Viewtype_Poster_Half.xml" />
 	<include file="Plexincludes.xml" />
 
+	<include name="TVLogosTitle">
+		<texture background="true">../../logos/$INFO[ListItem.TVShowTitle].png</texture>
+	</include>
+	
+	<include name="TVLogosSecondTitle">
+		<texture background="true">../../logos/$INFO[Container.SecondTitle].png</texture>
+	</include>
+
 	<include name="no_tv_theme">
 		<onfocus>SetFocus(50)</onfocus>
 	</include>

@@ -164,7 +164,7 @@
 			<posy>0</posy>
 			<width>300</width>
 			<height>116</height>
-			<texture background="true">../../logos/$INFO[ListItem.TVShowtitle].png</texture>
+			<include>TVLogosTitle</include>
 			<fadetime>100</fadetime>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<include>Animation_HiddenByInfo</include>

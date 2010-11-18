@@ -22,7 +22,7 @@
 				<posy>20</posy>
 				<width>300</width>
 				<height>116</height>
-				<texture background="true">../../logos/$INFO[ListItem.TVShowTitle].png</texture>
+				<include>TVLogosTitle</include>
 				<fadetime>100</fadetime>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
 				<visible>!Container.Content(seasons) + Skin.HasSetting(tv_logos)</visible>
@@ -32,7 +32,7 @@
 				<posy>20</posy>
 				<width>300</width>
 				<height>116</height>
-				<texture background="true">../../logos/$INFO[Container.SecondTitle].png</texture>
+				<include>TVLogosSecondTitle</include>
 				<fadetime>100</fadetime>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
 				<visible>Container.Content(seasons) + Skin.HasSetting(tv_logos)</visible>

@@ -387,7 +387,7 @@
 				<posy>0</posy>
 				<width>230</width>
 				<height>89</height>
-				<texture background="true">../../logos/$INFO[ListItem.Label].png</texture>
+				<include>TVLogosTitle</include>
 				<fadetime>100</fadetime>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
 				<visible>Container.Content(tvshows) + Skin.HasSetting(tv_logos)</visible>
@@ -397,7 +397,7 @@
 				<posy>0</posy>
 				<width>230</width>
 				<height>89</height>
-				<texture background="true">../../logos/$INFO[Container.SecondTitle].png</texture>
+				<include>TVLogosSecondTitle</include>
 				<fadetime>100</fadetime>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
 				<visible>Container.Content(seasons) + Skin.HasSetting(tv_logos)</visible>

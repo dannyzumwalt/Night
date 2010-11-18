@@ -159,7 +159,7 @@
 			<posy>300</posy>
 			<width>230</width>
 			<height>89</height>
-			<texture background="true" fallback="backgrounds/fallback.png">../../logos/$INFO[ListItem.TVShowTitle].png</texture>
+			<include>TVLogosTitle</include>
 			<fadetime>100</fadetime>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 		</control>
