@@ -119,15 +119,15 @@
 			<texture>backgrounds/games.png</texture>
 			<info>Skin.String(CustomGames)</info>
 			<visible>Container(300).HasFocus(7) + Control.IsVisible(300)</visible>
-			<visible>!Skin.String(CustomGamesFolder)</visible>
+			<visible>!Skin.String(CustomPlexOnlineFolder)</visible>
 		</control>
 
 		<control type="multiimage">
 			<include>Background_ImageFolder</include>
-			<info>Skin.String(CustomGamesFolder)</info>
+			<info>Skin.String(CustomPlexOnlineFolder)</info>
 			<randomize>true</randomize>
 			<visible>Container(300).HasFocus(7) + Control.IsVisible(300)</visible>
-			<visible>Skin.String(CustomGamesFolder)</visible>
+			<visible>Skin.String(CustomPlexOnlineFolder)</visible>
 		</control>
 		
 		<control type="largeimage">
@@ -238,17 +238,17 @@
 			<width>1280</width>
 			<height>720</height>
 			<texture>backgrounds/favourites.png</texture>
-			<info>Skin.String(CustomAssistant)</info>
+			<info>Skin.String(CustomfavouritesFolder)</info>
 			<visible>Container(300).HasFocus(18) + Control.IsVisible(300)</visible>
-			<visible>!Skin.String(CustomAssistantFolder)</visible>
+			<visible>!Skin.String(CustomfavouritesFolderFolder)</visible>
 		</control>
 
 		<control type="multiimage">
 			<include>Background_ImageFolder</include>
-			<info>Skin.String(CustomAssistantFolder)</info>
+			<info>Skin.String(CustomfavouritesFolderFolder)</info>
 			<randomize>true</randomize>
 			<visible>Container(300).HasFocus(18) + Control.IsVisible(300)</visible>
-			<visible>Skin.String(CustomAssistantFolder)</visible>
+			<visible>Skin.String(CustomfavouritesFolderFolder)</visible>
 		</control>
 
 		<control type="multiimage">
@@ -813,7 +813,7 @@
 					<description>programs</description>
 					<label>Plex Online</label>
 					<icon>backgrounds/games.png</icon>
-					<thumb>$INFO[Skin.String(CustomGamesFolder)]</thumb>				
+					<thumb>$INFO[Skin.String(CustomPlexOnlineFolder)]</thumb>				
 		            <onclick>Plex.ActivateWindow(1,plex://localhost/system/appstore,return)</onclick>
 					<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
 				</item>
