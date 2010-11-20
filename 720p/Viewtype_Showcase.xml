@@ -216,11 +216,10 @@
 			<visible>Control.IsVisible(58) + [Container.Content(movies) | Container.Content(TVShows)] + !IsEmpty(ListItem.Title) + !Skin.HasSetting(ShowcaseFanart)</visible>
 			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Viewtype_Showcase_LeftArea</include>
-			<animation effect="slide" start="0,0" end="0,50" time="0" condition="Skin.HasSetting(TV_logos)">Conditional</animation>
 			<control type="image" id="7037">
 				<visible>Skin.HasSetting(tv_logos)</visible>
 				<posx>100</posx>
-				<posy>190</posy>
+				<posy>240</posy>
 				<width>230</width>
 				<height>89</height>
 				<include>TVLogosTitle</include>
