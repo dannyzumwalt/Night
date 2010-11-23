@@ -10,10 +10,8 @@
 				<posy>490</posy>
 				<width>225</width>
 				<height>300</height>
-				<visible>[Container(300).HasFocus(8) | Container(300).HasFocus(14)]</visible>
 				<include>VisibleFadeEffect</include>
-				<animation effect="slide" start="225,0" end="0,0" time="600" delay="400" tween="cubic" easing="inout" condition="Container(300).HasFocus(8) | Container(300).HasFocus(14)">Conditional</animation>
-
+            	<visible>Weather.IsFetched</visible>
 			<!-- today -->
 				<!-- condition icon -->
 				<control type="image">

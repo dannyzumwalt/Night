@@ -1,13 +1,23 @@
 <window id="106">
 	<defaultcontrol>1000</defaultcontrol>
-	<include>Animation_Bartowski_Context_Zoom</include>
+		<animation type="WindowOpen">
+			<effect type="zoom" time="400" center="150,50" start="180" end="100" tween="cubic" easing="out" />
+			<effect type="fade" time="400" start="0" end="100" />
+		</animation>			
+		<animation type="WindowClose">
+			<effect type="zoom" time="400" center="150,50" start="100" end="280" tween="cubic" easing="in" />
+			<effect type="fade" time="400" start="100" end="0" />
+		</animation>	
 	<coordinates>
 		<system>1</system>
 		<posx>0</posx>
 		<posy>0</posy>
-		<origin x="460" y="160" />
 	</coordinates>
 	<controls>
+	<control type="group">
+		<posx>0</posx>
+		<posy>0</posy>
+
 		<control type="image" id="997">
 			<description>background top image</description>
 			<posx>0</posx>
@@ -23,7 +33,7 @@
 			<width>297</width>
 			<height>30</height>
 			<font>Font_Bartowski_MainMenu_Context</font>
-			<label>33061</label>
+			<label>544</label>
 			<align>center</align>
 			<aligny>center</aligny>
 			<textcolor>ff000000</textcolor>
@@ -65,6 +75,6 @@
 			<texturefocus border="5">confluence/button-focus.png</texturefocus>
 			<texturenofocus>-</texturenofocus>
 		</control>
-		
+		</control>		
 	</controls>
 </window>
