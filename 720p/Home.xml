@@ -108,6 +108,26 @@
 			<visible>Container(300).HasFocus(6) + Control.IsVisible(300)</visible>
 			<visible>Skin.String(CustomPicturesFolder)</visible>
 		</control>
+		<control type="largeimage">
+			<animation effect="fade" end="100" time="600">Visible</animation>
+			<animation effect="fade" end="0" time="600">Hidden</animation>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>backgrounds/programs.jpg</texture>
+			<info>Skin.String(CustomProgram)</info>
+			<visible>Container(300).HasFocus(10) + Control.IsVisible(300) + !Window.Previous(24)</visible>
+			<visible>!Skin.String(CustomProgramFolder)</visible>
+		</control>
+
+		<control type="multiimage">
+			<include>Background_ImageFolder</include>
+			<info>Skin.String(CustomProgramFolder)</info>
+			<randomize>true</randomize>
+			<visible>Container(300).HasFocus(10) + Control.IsVisible(300)</visible>
+			<visible>Skin.String(CustomProgramFolder)</visible>
+		</control>		
 
 		<control type="largeimage">
 			<animation effect="fade" end="100" time="600">Visible</animation>
@@ -815,18 +835,18 @@
 					<icon>backgrounds/games.png</icon>
 					<thumb>$INFO[Skin.String(CustomPlexOnlineFolder)]</thumb>				
 		            <onclick>Plex.ActivateWindow(1,plex://localhost/system/appstore,return)</onclick>
-					<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
+					<visible>!Skin.HasSetting(HomeMenuNoAppStoreButton)</visible>
 				</item>
-<!--
+
 				<item id="10">
-					<description>Scripts</description>
-					<label>$LOCALIZE[247]</label>
-					<icon>backgrounds/scripts.jpg</icon>
-					<thumb>$INFO[Skin.String(CustomScriptsFolder)]</thumb>	
-					<onclick>XBMC.ActivateWindow(scripts)</onclick>
-					<visible>!Skin.HasSetting(HomeMenuNoScriptsButton)</visible>
+					<description>Programs</description>
+					<label>$LOCALIZE[0]</label>
+					<icon>backgrounds/programs.jpg</icon>
+					<thumb>$INFO[Skin.String(CustomProgramsFolder)]</thumb>	
+		            <onclick>Plex.ActivateWindow(1)</onclick>
+					<visible>Skin.HasSetting(HomeMenuProgramsButton)</visible>
 				</item>
--->
+
 				<item id="18">
 					<description>favourites</description>
 					<label>$LOCALIZE[1036]</label>
@@ -1105,7 +1125,9 @@
 					<onup>9015</onup>
 					<ondown>9015</ondown>
 					<itemgap>0</itemgap>
-					<visible>Container(300).HasFocus(10) + [[Skin.HasSetting(HomeScriptButton1) + !IsEmpty(Skin.String(HomeScriptButton1_label))] | [Skin.HasSetting(HomeScriptButton2) + !IsEmpty(Skin.String(HomeScriptButton2_label))] | [Skin.HasSetting(HomeScriptButton3) + !IsEmpty(Skin.String(HomeScriptButton3_label))] | [Skin.HasSetting(HomeScriptButton4) + !IsEmpty(Skin.String(HomeScriptButton4_label))] | [Skin.HasSetting(HomeScriptButton5) + !IsEmpty(Skin.String(HomeScriptButton5_label))] | [Skin.HasSetting(HomeScriptButton6) + !IsEmpty(Skin.String(HomeScriptButton6_label))]]</visible>
+					<visible>false</visible>
+<!--					<visible>Container(300).HasFocus(10) + [[Skin.HasSetting(HomeScriptButton1) + !IsEmpty(Skin.String(HomeScriptButton1_label))] | [Skin.HasSetting(HomeScriptButton2) + !IsEmpty(Skin.String(HomeScriptButton2_label))] | [Skin.HasSetting(HomeScriptButton3) + !IsEmpty(Skin.String(HomeScriptButton3_label))] | [Skin.HasSetting(HomeScriptButton4) + !IsEmpty(Skin.String(HomeScriptButton4_label))] | [Skin.HasSetting(HomeScriptButton5) + !IsEmpty(Skin.String(HomeScriptButton5_label))] | [Skin.HasSetting(HomeScriptButton6) + !IsEmpty(Skin.String(HomeScriptButton6_label))]]</visible>
+-->
 					<control type="button" id="90151">
 						<description>Button1</description>
 						<include>ButtonHomeSubCommonValues</include>

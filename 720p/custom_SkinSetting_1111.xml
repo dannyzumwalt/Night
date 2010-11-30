@@ -595,14 +595,15 @@
 						<onclick>Skin.ToggleSetting(HomeMenuNoProgramsButton)</onclick>
 						<selected>!Skin.HasSetting(HomeMenuNoProgramsButton)</selected>
 					</control>
-					<control type="radiobutton" id="217">
-						<description>Hide Scripts Button</description>
-						<include>skin_settings_labels</include>
-						<label>$LOCALIZE[31111] - $LOCALIZE[31272]</label>
-						<onclick>Skin.ToggleSetting(HomeMenuNoScriptsButton)</onclick>
-						<selected>Skin.HasSetting(HomeMenuNoScriptsButton)</selected>
-					</control>
 -->
+					<control type="radiobutton" id="217">
+						<description>Hide Programs Button</description>
+						<include>skin_settings_labels</include>
+						<label>$LOCALIZE[31111] - $LOCALIZE[0]</label>
+						<onclick>Skin.ToggleSetting(HomeMenuProgramsButton)</onclick>
+						<selected>!Skin.HasSetting(HomeMenuProgramsButton)</selected>
+					</control>
+
 					<control type="radiobutton" id="218">
 						<description>Hide Weather Button</description>
 						<include>skin_settings_labels</include>
@@ -905,14 +906,14 @@
 								<icon>backgrounds/weather.jpg</icon>
 								<thumb>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</thumb>
 							</item>
-<!--
+
 							<item id="6">
-								<label>247</label>
+								<label>0</label>
 								<onclick>-</onclick>
-								<icon>backgrounds/scripts.jpg</icon>
-								<thumb>$INFO[Skin.String(Home_Custom_Back_Scripts_Folder)]</thumb>
+								<icon>backgrounds/programs.jpg</icon>
+								<thumb>$INFO[Skin.String(CustomProgramFolder)]</thumb>
 							</item>
--->
+
 							<item id="18">
 								<label>1036</label>
 								<onclick>-</onclick>
@@ -1258,7 +1259,7 @@
 								<align>center</align>
 								<texturenofocus border="5">confluence/button-nofocus.png</texturenofocus>
 								<texturefocus border="5">confluence/button-focus.png</texturefocus>
-								<onclick>Skin.SetImage(CustomScriptsFolder)</onclick>
+								<onclick>Skin.SetImage(CustomProgram)</onclick>
 								<onleft>302</onleft>
 								<onright>301</onright>
 								<onup>304</onup>
@@ -1277,7 +1278,7 @@
 								<align>center</align>
 								<texturenofocus border="5">confluence/button-nofocus.png</texturenofocus>
 								<texturefocus border="5">confluence/button-focus.png</texturefocus>
-								<onclick>Skin.SetPath(CustomScriptsFolder)</onclick>
+								<onclick>Skin.SetPath(CustomProgramFolder)</onclick>
 								<onleft>300</onleft>
 								<onright>302</onright>
 								<onup>304</onup>
