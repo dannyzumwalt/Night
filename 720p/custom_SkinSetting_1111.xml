@@ -1297,7 +1297,7 @@
 								<align>center</align>
 								<texturenofocus border="5">confluence/button-nofocus.png</texturenofocus>
 								<texturefocus border="5">confluence/button-focus.png</texturefocus>
-								<onclick>Skin.Reset(CustomScriptsFolder)</onclick>
+								<onclick>Skin.Reset(CustomProgramFolder)</onclick>
 								<onleft>301</onleft>
 								<onright>300</onright>
 								<onup>304</onup>
