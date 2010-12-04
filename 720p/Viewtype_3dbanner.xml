@@ -92,16 +92,16 @@
 						<height>80</height>
 						<texture background="true" flipy="true" diffuse="movie-poster/xper_test.png">$INFO[ListItem.Banner]</texture>
 						<fadetime>200</fadetime>
-						<colordiffuse>89FFFFFF</colordiffuse>
+						<colordiffuse>69FFFFFF</colordiffuse>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 					</control>
 					<control type="image">
 						<posx>90</posx>
-						<posy>266</posy>
+						<posy>261</posy>
 						<width>78</width>
 						<height>60</height>
 						<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
-						<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+						<visible>Skin.HasSetting(tvoverlays)</visible>
 					</control>
 				</control>
 			</itemlayout>
@@ -179,9 +179,9 @@
 						<texture background="true" flipy="true" diffuse="movie-poster/xper_test.png">$INFO[ListItem.Banner]</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<colordiffuse>69FFFFFF</colordiffuse>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
-							<effect type="fade" start="0" end="70" time="600" />
 						</animation>
 					</control>
 					<control type="image">
@@ -198,14 +198,14 @@
 					</control>
 					<control type="image">
 						<posx>210</posx>
-						<posy>270</posy>
+						<posy>260</posy>
 						<width>100</width>
 						<height>76</height>
 						<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
 						</animation>
-						<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+						<visible>Skin.HasSetting(tvoverlays)</visible>
 					</control>
 				</control>	
 			</focusedlayout>
@@ -334,13 +334,22 @@
 				<font>Font_TVShow</font>
 				<label>[COLOR=ListTrackF][B]$LOCALIZE[368][/COLOR] [COLOR=white]$INFO[ListItem.Rating][/COLOR][/B]      [COLOR=ListTrackF][B]$LOCALIZE[31226][/COLOR] [COLOR=white]$INFO[ListItem.mpaa][/COLOR][/B]</label>
 			</control>
+			<control type="label">
+				<visible>Container.Content(tvshows)</visible>
+				<posx>0</posx>
+				<posy>90</posy>
+				<width>630</width>
+				<height>89</height>
+				<font>Font_TVShow</font>
+				<label>[COLOR=ListTrackF][B]$LOCALIZE[16101][/COLOR] [COLOR=white]$INFO[ListItem.Property(UnwatchedEpisodes)][/COLOR][/B]</label>
+			</control>
 	<!--		<include>Poster_Next_Aired</include>  -->
 	</control>
 	
 		<control type="scrollbar" id="5930">
 			<include>Animation_ZoomInZoomOut</include>
 			<posx>100</posx>
-			<posy>900</posy>
+			<posy>680</posy>
 			<width>1080</width>
 			<height>25</height>
 			<visible allowhiddenfocus="true">Control.IsVisible(593) + Control.HasFocus(5930)</visible>

@@ -475,6 +475,15 @@
 				<label>[COLOR=ListTrackF][B]$LOCALIZE[368][/COLOR] [COLOR=white]$INFO[ListItem.Rating][/COLOR][/B]      [COLOR=ListTrackF][B]$LOCALIZE[31226][/COLOR] [COLOR=white]$INFO[ListItem.mpaa][/COLOR][/B]</label>
 			</control>
 
+			<control type="label">
+				<visible>Container.Content(tvshows)</visible>
+				<posx>0</posx>
+				<posy>90</posy>
+				<width>630</width>
+				<height>89</height>
+				<font>Font_TVShow</font>
+				<label>[COLOR=ListTrackF][B]$LOCALIZE[16101][/COLOR] [COLOR=white]$INFO[ListItem.Property(UnwatchedEpisodes)][/COLOR][/B]</label>
+			</control>
 <!--			<include>Poster_Next_Aired</include> -->
 
 		</control>

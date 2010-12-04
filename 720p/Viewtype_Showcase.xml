@@ -376,6 +376,24 @@
 					<textcolor>mainbluedarker</textcolor>
 					<label></label>
 				</control>
+				<control type="label"><!--UnWatched-->
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>390</width>
+					<height>24</height>
+					<font>Font_Bartowski_Showcase_Right_Main</font>
+					<textcolor>mainbluedarker</textcolor>
+					<label>$LOCALIZE[16101]</label>
+				</control>
+				<control type="label"><!--UnWatched-->
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>390</width>
+					<height>24</height>
+					<font>Font_Bartowski_Showcase_Right_Under</font>
+					<textcolor>ffffffff</textcolor>
+					<label fallback="Not Available">$INFO[ListItem.Property(UnwatchedEpisodes)]</label>
+				</control>
 				<control type="label"><!--Writer-->
 					<posx>0</posx>
 					<posy>0</posy>
